@@ -1,0 +1,120 @@
+<https://w3id.org/b4b/schemes/algorithms/sba#> a owl:Ontology ;
+owl:imports <https://brickschema.org/schema/Brick#> , <http://www.w3.org/ns/sosa/>, <http://www.w3.org/ns/ssn/>, <https://w3id.org/pep#> ;
+.
+
+#################################################################
+#     Classes
+#################################################################
+
+sba:SmartBuildingAlgorithm
+  a owl:Class ;
+  rdfs:label "SmartBuildingAlgorithm" ;
+  rdfs:subClassOf sosa:Procedure, pep:Procedure  ;
+.
+
+sba:LoadForecastAlgorithm
+  rdfs:subClassOf sba:SmartBuildingAlgorithm ;
+  rdfs:label "LoadForecastModel" ;
+  rdfs:comment "The algorithm forecasts the building electricity load withing the given starting time (6.00 a.m) and end time (6.00 p.m)." ;
+.
+
+sba:RealtimeFeedbackAlgorithm
+  rdfs:subClassOf sba:SmartBuildingAlgorithm;
+  rdfs:label "RealtimeFeedbackAlgorithm" ;
+.
+sba:RealtimeFeedback
+  rdf:type owl:Class ;
+  rdfs:label "RealtimeFeedback" ;
+  rdfs:subClassOf sba:AlgorithmOutput ;
+.
+
+sba:MachineLearningModel
+  a owl:Class ;
+  rdfs:label "MachineLearningModel" ;
+  rdfs:subClassOf ssn:Input ;
+.
+
+sba:AlgorithmOutput
+  a owl:Class ;
+  rdfs:label "AlgorithmOutput" ;
+  rdfs:subClassOf ssn:Input, ssn:Output  ;
+.
+
+sba:ExternalPVForecastServiceProvider
+  a owl:Class ;
+  rdfs:label "ExternalPVForecastServiceProvider" ;
+  rdfs:subClassOf sba:ServiceProvider
+.
+
+sba:ExternalPriceForecastServiceProvider
+  a owl:Class ;
+  rdfs:label "ExternalPriceForecastServiceProvider";
+  rdfs:subClassOf ssn:Input, sba:ServiceProvider
+.
+
+sba:ExternalPriceForecastServiceProvider 
+rdfs:subClassOf brick:Point;
+.
+
+sba:ServiceProvider
+  a owl:Class ;
+  rdfs:label "ServiceProvider";
+.
+
+sba:ServiceAPI
+  a owl:Class ;
+  rdfs:label "ServiceAPI" ;
+.
+
+#################################################################
+#     Object properties
+#################################################################
+
+sba:hasInputData
+  a owl:ObjectProperty ;
+    rdfs:subPropertyOf sba:hasInput 
+.
+
+sba:hasInputPredictionModel
+  a owl:ObjectProperty ;
+    rdfs:subPropertyOf sba:hasInput 
+.
+
+sba:hasPredictionOutput
+  a owl:ObjectProperty ;
+    rdfs:subPropertyOf sba:hasOutput
+.
+
+sba:hasInput
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a model and its inputs" ;
+  rdfs:label "hasInput" ;
+  rdfs:domain sba:SmartBuildingAlgorithm ;
+.
+
+sba:hasOutput
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a model and its outputs" ;
+  rdfs:label "hasOutput" ;
+  rdfs:domain sba:SmartBuildingAlgorithm ;
+.
+
+sba:hasTimeResolution a owl:DatatypeProperty ;
+    rdfs:domain sba:SmartBuildingAlgorithm ;
+    rdfs:range xsd:string ;
+.
+
+sba:hasAPISpecification
+  a owl:ObjectProperty ;
+  rdfs:comment "Relation between a web service API and its specification (openAPI)" ;
+  rdfs:label "hasAPISpecification" ;
+  rdfs:domain sba:ServiceAPI ;
+  rdfs:range xsd:string ;
+.
+
+
+#################################################################
+#     Data Properties
+#################################################################
+
+

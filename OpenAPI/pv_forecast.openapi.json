@@ -1,0 +1,120 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/PV-Forecast": {
+            "get": {
+                "tags": [
+                    "PV forecast"
+                ],
+                "summary": "Get PV forcast.",
+                "operationId": "get_pv_forecast_PV_Forecast_get",
+                "responses": {
+                    "200": {
+                        "description": "Response containing information about the success of the operation and the list of energy prices.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "PV forecast"
+                ],
+                "summary": "Get PV forcast and save to database.",
+                "description": "Get pv forcast and save to database. Timestamps are in UTC not local.",
+                "operationId": "get_pv_forecast_PV_Forecast_post",
+                "parameters": [
+                    {
+                        "name": "realtime_ref",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "The reference to realtime data point according to metadata graph",
+                            "title": "Realtime Ref"
+                        },
+                        "description": "The reference to realtime data point according to metadata graph",
+                        "example": "1cb9d9b555b336abe33f990c32ae06fd.Value"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response containing information about the success of the operation and the list of energy prices.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

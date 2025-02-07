@@ -1,0 +1,16 @@
+bldg1:pv_service a sba:ExternalPVForecastServiceProvider ;
+     ref:hasExternalReference bldg1:pv_api ;
+.
+bldg1:price_service a sba:ExternalPriceForecastServiceProvider ;
+    ref:hasExternalReference bldg1:price_api ;
+.
+
+bldg1:pv_api a ref:APIReference ;
+rdfs:label "PV-forecast-service" ;
+  ref:hasAPIDocs "pv-api" ;
+.
+
+bldg1:price_api a ref:APIReference ;
+rdfs:label "Electricity-price-service" ;
+  ref:hasAPIDocs "https://mijn.easyenergy.com/nl/api/tariff/getapxtariffs" ;
+.

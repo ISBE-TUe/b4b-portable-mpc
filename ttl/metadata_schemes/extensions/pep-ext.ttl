@@ -1,0 +1,18 @@
+<https://w3id.org/b4b/schemes/ext/pep-ext#> a owl:Ontology ;
+owl:imports <https://w3id.org/pep#>  ;
+.
+
+pep-ext:DisturbanceForecastExecutor rdfs:subClassOf pep:ProcedureExecutor .
+pep-ext:BuildingLoadForecastProcedureExecutor rdfs:subClassOf pep-ext:DisturbanceForecastExecutor   .
+pep-ext:PVForecasProcedureExecutor rdfs:subClassOf pep-ext:DisturbanceForecastExecutor   .
+pep-ext:ElectricityPriceForecastProcedureExecutor rdfs:subClassOf pep-ext:DisturbanceForecastExecutor   .
+pep-ext:RealtimeFeedbackExecutor rdfs:subClassOf pep:ProcedureExecutor .
+pep-ext:RealtimeFeedbackAlgorithmProcedureExecutor rdfs:subClassOf pep-ext:RealtimeFeedbackExecutor  .
+
+
+pep-ext:MPCProcedureExecutor  pep:implements mpc:DSM-MPC  .
+pep-ext:MPCSetpointProcedureExecutor  pep:implements mpc:EVChargingCurrentSetpointCommunication  .
+pep-ext:BuildingLoadForecastProcedureExecutor pep:implements sba:LoadForecastAlgorithm .
+pep-ext:PVForecasProcedureExecutor pep:implements sba:PVForecastAlgorithm .
+pep-ext:ElectricityPriceForecastProcedureExecutor pep:implements sba:PriceForecastAlgorithm .
+pep-ext:RealtimeFeedbackAlgorithmProcedureExecutor pep:implements sba:RealtimeFeedbackAlgorithm  .

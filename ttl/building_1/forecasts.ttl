@@ -1,0 +1,64 @@
+bldg1:bldgLoadForecast a sba:BuildingLoadForecast ;
+rdfs:label "BuildingLoadForecast" ;
+    brick:hasUnit unit:KiloW ;
+  ref:hasExternalReference bldg1:bldgLoadForecast_forecastref ;
+.
+
+bldg1:bldgLoadForecast_forecastref
+    a ref:ForecastTimeseriesReference ;
+    ref:hasForecastTimeseriesId  "Building-Load-Forecast" ;
+    ref:storedAt  bldg1:appdata ;
+.
+
+bldg1:bldgOutdoorTemperatureForecast  a forc:OutdoorTemperatureForecast ;
+  brick:hasUnit unit:DEG_C ;
+  ref:hasExternalReference bldg1:bldgOutdoorTemperatureForecast_forecastref ;
+.
+
+bldg1:bldgOutdoorTemperatureForecast_forecastref a ref:ForecastTimeseriesReference ;
+rdfs:label "OutdoorTemperatureForecast" ;
+  ref:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref:storedAt  bldg1:insitereports ;
+.
+
+bldg1:bldgSolarRadianceForecast a forc:SolarRadianceForecast ;
+  brick:hasUnit unit:W-PER-M2 ;
+  ref:hasExternalReference  bldg1:bldgSolarRadianceForecast_forecastref ;
+.
+
+bldg1:bldgSolarRadianceForecast_forecastref a ref:ForecastTimeseriesReference ;
+rdfs:label "SolarRadianceForecast" ;
+  ref:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref:storedAt  bldg1:insitereports ;
+.
+
+bldg1:bldgWindSpeedForecast a forc:WindSpeedForecast ;
+  brick:hasUnit unit:M-PER-SEC ;
+  ref:hasExternalReference bldg1:bldgWindSpeedForecast_forecastref ;
+.
+
+bldg1:bldgWindSpeedForecast_forecastref a ref:ForecastTimeseriesReference ;
+rdfs:label "WindSpeedForecast" ;
+  ref:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref:storedAt  bldg1:insitereports ;
+.
+
+bldg1:bldgPVForecast a forc:PVForecast ;
+  ref:hasExternalReference bldg1:bldgPV_ref ;
+.
+
+bldg1:bldgPV_ref a ref:ForecastTimeseriesReference ;
+    rdfs:label "PVForecast" ;
+    ref:hasForecastTimeseriesId  "1cb9d9b555b336abe33f990c32ae06fd.Value" ; 
+    ref:storedAt  bldg1:insitereports ;
+.
+
+bldg1:bldgElectricityPriceForecast a forc:ElectricityPriceForecast ;
+  ref:hasExternalReference bldg1:bldgElectricityPrice_api_ref ;
+.
+
+bldg1:bldgElectricityPrice_api_ref a ref:ForecastTimeseriesReference ;
+    rdfs:label "ElectricityPriceForecast" ;
+    ref:hasForecastTimeseriesId "Energy-Price-Forecast" ; 
+    ref:storedAt  bldg1:insitereports ;
+.

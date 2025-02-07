@@ -1,0 +1,72 @@
+bldg2:mpc-artifact a pep-ext:MPCProcedureExecutor .
+bldg2:mpc-setpoint-artifact  a pep-ext:MPCSetpointProcedureExecutort .
+bldg2:load-forecast-artifact  a pep-ext:BuildingLoadForecastProcedureExecutor .
+bldg2:pv-forecast-artifact a pep-ext:PVForecasProcedureExecutor.
+bldg2:price-forecast-artifact a pep-ext:ElectricityPriceForecastProcedureExecutor .
+bldg2:feedback-artifact a pep-ext:RealtimeFeedbackAlgorithmProcedureExecutor  .
+
+#################################################
+
+pep-ev:MPCService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:MPCProcedureExecutor ;
+  sba:hasAPI pep-ev:MPCAPI ;
+.
+
+pep-ev:MPCAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8000/mpc/docs#/" ;
+.
+
+#################################################
+
+pep-ev:SetpointExecutionService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:MPCSetpointProcedureExecutor   ;
+  sba:hasAPI pep-ev:SetpointAPI ;
+.
+
+pep-ev:SetpointAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8000/setpoints/docs#/" ;
+.
+
+#################################################
+ 
+pep-ev:LoadForecastService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:BuildingLoadForecastProcedureExecutor ;
+  sba:hasAPI pep-ev:LoadForecastAPI ;
+.
+
+pep-ev:LoadForecastAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8010/building-load/docs#/" ;
+.
+
+#################################################
+
+pep-ev:PVForecastService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:PVForecasProcedureExecutor ;
+  sba:hasAPI pep-ev:PVForecastAPI ;
+.
+
+pep-ev:PVForecastAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8010/pv-forecast/docs#/" ;
+.
+
+#################################################
+
+pep-ev:RealtimeFeedbackService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:RealtimeFeedbackAlgorithmProcedureExecutor ;
+  sba:hasAPI bldg2:RealtimeFeedbackAPI ;
+.
+
+pep-ev:RealtimeFeedbackAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8010/feedback/docs#/" ;
+.
+
+#################################################
+
+pep-ev:PriceForecastService a pep:ProcedureExecutionContainer ;
+  pep:forExecutor pep-ev:ElectricityPriceForecastProcedureExecutor  ;
+  sba:hasAPI pep-ev:PriceForecastAPI ;
+.
+
+pep-ev:ElectricityPriceForecastAPI a sba:ServiceAPI ;
+  sba:hasAPISpecification "http://10.50.1.70:8010/energy-price/docs#/" ;
+.

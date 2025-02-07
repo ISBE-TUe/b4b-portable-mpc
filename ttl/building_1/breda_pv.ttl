@@ -1,0 +1,7 @@
+bldg1:bldgPVGenerationSystem a brick:PV_Generation_System ;
+    brick:hasPart bldg1:bldgPVArray_1 ;
+    brick:feeds bldg1:submeter_pv ;
+.
+
+bldg1:bldgPVArray_1 a brick:brick:PV_Array ;
+.

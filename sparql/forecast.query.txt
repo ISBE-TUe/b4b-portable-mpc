@@ -1,0 +1,11 @@
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+select ?input where { 
+    ?s ?p ?input .
+    FILTER(?s=sba:LoadForecastAlgorithm)
+    FILTER(?p=sba:hasInputData)
+}

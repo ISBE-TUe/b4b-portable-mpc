@@ -1,0 +1,367 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/Building-Load-Forecast": {
+            "get": {
+                "tags": [
+                    "Building Load Forecast"
+                ],
+                "summary": "Get load forcast.",
+                "description": "Response containing information about the success of the operation and the list of energy prices.",
+                "operationId": "get_load_forecast_Building_Load_Forecast_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Building Load Forecast"
+                ],
+                "summary": "Run building load forcast and save to database.",
+                "description": "Run building load forcast for the defined time period and save to database.",
+                "operationId": "forecast_building_load_Building_Load_Forecast_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LoadForecastConfigBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoadForecastResponse"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/load-forecast-training": {
+            "post": {
+                "tags": [
+                    "Building Load Forecast"
+                ],
+                "summary": "Train load forcast model based on recent data, perform forecast and save to database.",
+                "description": "Run building load forcast for the defined time period and save to database.",
+                "operationId": "forecast_building_load_load_forecast_training_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TrainingAndLoadForecastConfigBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "LoadForecastConfigBody": {
+                "properties": {
+                    "building_id": {
+                        "type": "string",
+                        "title": "Building Id",
+                        "example": "breda"
+                    },
+                    "forecast_model_id": {
+                        "type": "string",
+                        "title": "Forecast Model Id",
+                        "example": "breda"
+                    },
+                    "from_time": {
+                        "type": "string",
+                        "title": "From Time",
+                        "description": "Start time for data retrieval",
+                        "example": "2025-02-06 06:00:00"
+                    },
+                    "to_time": {
+                        "type": "string",
+                        "title": "To Time",
+                        "description": "End time for data retrieval",
+                        "example": "2025-02-06 18:00:00"
+                    },
+                    "building_load": {
+                        "type": "string",
+                        "title": "Building Load",
+                        "description": "Past two weeks building load",
+                        "example": "f30ca6c6d2b3111dee9066951e270141.Value"
+                    },
+                    "outdoor_temp": {
+                        "type": "string",
+                        "title": "Outdoor Temp",
+                        "description": "Past two weeks outdoor temperature",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "ghi": {
+                        "type": "string",
+                        "title": "Ghi",
+                        "description": "Past two weeks outdoor ghi",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "wind_speed": {
+                        "type": "string",
+                        "title": "Wind Speed",
+                        "description": "Past two weeks outdoor wind speed",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "outdoor_temp_forecast": {
+                        "type": "string",
+                        "title": "Outdoor Temp Forecast",
+                        "description": "outdoor temperature forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    },
+                    "ghi_forecast": {
+                        "type": "string",
+                        "title": "Ghi Forecast",
+                        "description": "outdoor ghi forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    },
+                    "wind_speed_forecast": {
+                        "type": "string",
+                        "title": "Wind Speed Forecast",
+                        "description": "outdoor wind speed forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "from_time",
+                    "to_time",
+                    "building_load",
+                    "outdoor_temp",
+                    "ghi",
+                    "wind_speed",
+                    "outdoor_temp_forecast",
+                    "ghi_forecast",
+                    "wind_speed_forecast"
+                ],
+                "title": "LoadForecastConfigBody"
+            },
+            "LoadForecastResponse": {
+                "properties": {
+                    "from_time": {
+                        "type": "string",
+                        "title": "From Time"
+                    },
+                    "to_time": {
+                        "type": "string",
+                        "title": "To Time"
+                    },
+                    "load_forecast": {
+                        "items": {
+                            "type": "object"
+                        },
+                        "type": "array",
+                        "title": "Load Forecast"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Timestamp"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "from_time",
+                    "to_time",
+                    "load_forecast",
+                    "timestamp"
+                ],
+                "title": "LoadForecastResponse"
+            },
+            "TrainingAndLoadForecastConfigBody": {
+                "properties": {
+                    "building_id": {
+                        "type": "string",
+                        "title": "Building Id",
+                        "example": "breda"
+                    },
+                    "forecast_model_id": {
+                        "type": "string",
+                        "title": "Forecast Model Id",
+                        "example": "breda"
+                    },
+                    "train_from_time": {
+                        "type": "string",
+                        "title": "Train From Time",
+                        "description": "Start time for data retrieval",
+                        "example": "2024-02-07 00:00:00"
+                    },
+                    "train_to_time": {
+                        "type": "string",
+                        "title": "Train To Time",
+                        "description": "End time for data retrieval",
+                        "example": "2025-02-06 00:00:00"
+                    },
+                    "predict_from_time": {
+                        "type": "string",
+                        "title": "Predict From Time",
+                        "description": "Start time for data retrieval",
+                        "example": "2025-02-06 06:00:00"
+                    },
+                    "predict_to_time": {
+                        "type": "string",
+                        "title": "Predict To Time",
+                        "description": "End time for data retrieval",
+                        "example": "2025-02-06 18:00:00"
+                    },
+                    "building_load": {
+                        "type": "string",
+                        "title": "Building Load",
+                        "description": "Past two weeks building load",
+                        "example": "f30ca6c6d2b3111dee9066951e270141.Value"
+                    },
+                    "outdoor_temp": {
+                        "type": "string",
+                        "title": "Outdoor Temp",
+                        "description": "Past two weeks outdoor temperature",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "ghi": {
+                        "type": "string",
+                        "title": "Ghi",
+                        "description": "Past two weeks outdoor ghi",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "wind_speed": {
+                        "type": "string",
+                        "title": "Wind Speed",
+                        "description": "Past two weeks outdoor wind speed",
+                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                    },
+                    "outdoor_temp_forecast": {
+                        "type": "string",
+                        "title": "Outdoor Temp Forecast",
+                        "description": "outdoor temperature forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    },
+                    "ghi_forecast": {
+                        "type": "string",
+                        "title": "Ghi Forecast",
+                        "description": "outdoor ghi forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    },
+                    "wind_speed_forecast": {
+                        "type": "string",
+                        "title": "Wind Speed Forecast",
+                        "description": "outdoor wind speed forecast",
+                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "train_from_time",
+                    "train_to_time",
+                    "predict_from_time",
+                    "predict_to_time",
+                    "building_load",
+                    "outdoor_temp",
+                    "ghi",
+                    "wind_speed",
+                    "outdoor_temp_forecast",
+                    "ghi_forecast",
+                    "wind_speed_forecast"
+                ],
+                "title": "TrainingAndLoadForecastConfigBody"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

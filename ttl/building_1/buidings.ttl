@@ -1,0 +1,8 @@
+bldg1:bldgKropmanBuilding a bot:Building ;
+rdfs:label "Kropman Breda" ;
+    brick:isLocationOf 
+        bldg1:ev-hub,
+        bldg1:bldgPVGenerationSystem,
+        bldg1:bldgWeatherStation ;
+    brick:isMeteredBy bldg1:bldgPowermeter ;
+.

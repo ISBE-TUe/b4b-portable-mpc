@@ -1,0 +1,103 @@
+<https://w3id.org/b4b/schemes/ext/ref-ext#> a owl:Ontology ;
+owl:imports <https://brickschema.org/schema/Brick/ref#>  ;
+.
+
+ref-ext:DocumentReference a owl:Class ;
+    rdfs:subClassOf ref:ExternalReference ;
+    skos:definition "A reference to a stream of timeseries data in a database. Contains the data for this entity" ;
+    sh:property [ a sh:PropertyShape ;
+            skos:definition "The identifier for the timeseries data corresponding to this point" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path ref:hasDocumentId ],
+        [ a sh:PropertyShape ;
+            skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
+            sh:datatype xsd:string ;
+            sh:path ref:storedAt ] 
+.
+
+ref-ext:hasDocumentId a owl:DatatypeProperty ;
+    rdfs:label "hasDocumentId" ;
+    rdfs:range xsd:string ;
+    skos:definition "The unique identifier (primary key) for this TimeseriesReference in some database"@en ;
+.
+
+ref-ext:ForecastTimeseriesReference a owl:Class;
+    rdfs:subClassOf ref:ExternalReference ;
+    skos:definition "A reference to a stream of timeseries data in a database. Contains the data for this entity" ;
+    sh:property [ a sh:PropertyShape ;
+            skos:definition "The identifier for the timeseries data corresponding to this point" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path ref:hasForecastTimeseriesId ],
+        [ a sh:PropertyShape ;
+            skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
+            sh:datatype xsd:string ;
+            sh:path ref:storedAt ] ;
+.
+
+ref-ext:hasForecastTimeseriesId a owl:DatatypeProperty ;
+    rdfs:label "hasTimeseriesId" ;
+    rdfs:range xsd:string ;
+    skos:definition "The unique identifier (primary key) for this TimeseriesReference in some database"@en ;
+.
+
+ref-ext:HistoricalTimeseriesReference a owl:Class;
+    rdfs:subClassOf ref:ExternalReference ;
+    skos:definition "A reference to a stream of timeseries data in a database. Contains the data for this entity" ;
+    sh:property [ a sh:PropertyShape ;
+            skos:definition "The identifier for the timeseries data corresponding to this point" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path ref:hasHistoricalTimeseriesId ],
+        [ a sh:PropertyShape ;
+            skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
+            sh:datatype xsd:string ;
+            sh:path ref:storedAt ] ;
+.
+
+ref-ext:hasHistoricalTimeseriesId a owl:DatatypeProperty ;
+    rdfs:label "hasTimeseriesId" ;
+    rdfs:range xsd:string ;
+    skos:definition "The unique identifier (primary key) for this TimeseriesReference in some database"@en ;
+.
+
+ref-ext:RealtimeTimeseriesReference a owl:Class;
+    rdfs:subClassOf ref:ExternalReference ;
+    skos:definition "A reference to a stream of timeseries data in a database. Contains the data for this entity" ;
+    sh:property [ a sh:PropertyShape ;
+            skos:definition "The identifier for the timeseries data corresponding to this point" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path ref:hasRealtimeTimeseriesId ],
+        [ a sh:PropertyShape ;
+            skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
+            sh:datatype xsd:string ;
+            sh:path ref:storedAt ] ;
+.
+
+ref-ext:hasRealtimeTimeseriesId a owl:DatatypeProperty ;
+    rdfs:label "hasTimeseriesId" ;
+    rdfs:range xsd:string ;
+    skos:definition "The unique identifier (primary key) for this TimeseriesReference in some database"@en ;
+.
+
+ref-ext:LastKnownValueTimeseriesReference a owl:Class;
+    rdfs:subClassOf ref:ExternalReference ;
+    skos:definition "A reference to a stream of timeseries data in a database. Contains the data for this entity" ;
+    sh:property [ a sh:PropertyShape ;
+            skos:definition "The identifier for the timeseries data corresponding to this point" ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path ref:hasLastKnownValueTimeseriesId ],
+        [ a sh:PropertyShape ;
+            skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
+            sh:datatype xsd:string ;
+            sh:path ref:storedAt ] ;
+.
+
+ref-ext:hasLastKnownValueTimeseriesId a owl:DatatypeProperty ;
+    rdfs:label "hasTimeseriesId" ;
+    rdfs:range xsd:string ;
+    skos:definition "The unique identifier (primary key) for this TimeseriesReference in some database"@en ;
+.

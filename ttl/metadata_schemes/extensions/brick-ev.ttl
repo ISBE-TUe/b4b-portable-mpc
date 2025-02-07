@@ -1,0 +1,93 @@
+<https://w3id.org/b4b/schemes/ext/brick-ev#> a owl:Ontology ;
+owl:imports <https://brickschema.org/schema/Brick#>  ;
+.
+
+
+brick-ev:EV_Charging_Station_ID
+  rdfs:label "EV_Charging_Station_ID" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+brick-ev:EV_Battery_Size
+  rdfs:label "Battery_size" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+brick-ev:EV_Arrival_Time
+  rdfs:label "ActualArrival" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+
+brick-ev:EV_Departure_Time
+  rdfs:label "ExpectedDeparture" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+
+brick-ev:EV_Arrival_SOC
+  rdfs:label "StateOfCharge" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+brick-ev:Charging_Session_Status 
+  rdfs:label "status" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+
+brick-ev:Vehicle_Full_Status
+  rdfs:label "vehicle_full_date" ;
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+brick-ev:Session_Visual_Number
+  rdfs:label "visual_number";
+  rdfs:subClassOf brick-ev:EV_Charging_Session
+.
+
+brick-ev:Charging_Current_Setpoint a owl:Class ;
+    rdfs:label "EV Charging Current Setpoint" ;
+    rdfs:subClassOf brick:Setpoint ;
+.
+brick-ev:EV_Charging_Session a owl:Class ;
+    rdfs:label "EV_Charging_Session" ;
+    rdfs:subClassOf brick:Point ;
+.
+
+brick-ev:EV_Charger_Voltage_Rating
+  rdfs:subClassOf brick:ratedMaximumInput
+.
+
+brick-ev:EV_Charger_Power_Rating
+  rdfs:subClassOf brick:ratedPowerInput 
+.
+
+brick-ev:EV_Charger_Efficiency 
+  rdfs:subClassOf brick:conversionEfficiency .
+
+brick-ev:MinimumChargingCurrentSetpoint 
+  rdfs:subClassOf brick:Setpoint 
+.
+
+brick-ev:MaximumChargingCurrentSetpoint 
+  rdfs:subClassOf brick:Setpoint 
+.
+
+brick-ev:EV_Electric_Power_Sensor
+  rdfs:subClassOf brick:Electric_Power_Sensor 
+.
+
+brick-ev:EV_Electric_Energy_Sensor
+  rdfs:subClassOf brick:Electric_Energy_Sensor 
+.
+
+brick-ev:EV_Load_Current_Sensor
+  rdfs:subClassOf brick:Load_Currnt_Sensor 
+.
+
+brick-ev:EVChargingCurrentSetpoint
+  rdf:type owl:Class ;
+  rdfs:label "OptimumEVChargingSetpoints" ;
+  rdfs:comment "Model Predictive Controller generated optimum current (Ampere) setpoints for each Electric Vehicle in the EV fleet for the remaining time period of the receeding horizon." ;
+  rdfs:subClassOf brick:Setpoint ;
+.

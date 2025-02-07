@@ -1,0 +1,166 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/Energy-Price-Forecast": {
+            "get": {
+                "tags": [
+                    "Price forecast"
+                ],
+                "summary": "Get price forcast.",
+                "operationId": "get_price_forecast_Energy_Price_Forecast_get",
+                "responses": {
+                    "200": {
+                        "description": "Response containing information about the success of the operation and the list of energy prices.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Price forecast"
+                ],
+                "summary": "Get price forcast and save to database.",
+                "description": "Get price forcast and save to database. Need GMT.",
+                "operationId": "get_price_forecast_Energy_Price_Forecast_post",
+                "parameters": [
+                    {
+                        "name": "from_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "Start time for data retrieval",
+                            "title": "From Time"
+                        },
+                        "description": "Start time for data retrieval",
+                        "example": "2025-02-06T04:00:00Z"
+                    },
+                    {
+                        "name": "to_time",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "description": "End time for data retrieval",
+                            "title": "To Time"
+                        },
+                        "description": "End time for data retrieval",
+                        "example": "2025-02-06T18:00:00Z"
+                    },
+                    {
+                        "name": "include_vat",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "Include Vat"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response containing information about the success of the operation and the list of energy prices.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceForecastResponse"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "PriceForecastResponse": {
+                "properties": {
+                    "energy_prices": {
+                        "items": {
+                            "type": "object"
+                        },
+                        "type": "array",
+                        "title": "Energy Prices"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Timestamp"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "energy_prices",
+                    "timestamp"
+                ],
+                "title": "PriceForecastResponse"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

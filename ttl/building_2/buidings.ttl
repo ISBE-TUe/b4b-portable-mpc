@@ -1,0 +1,8 @@
+bldg2:virtual_building a bot:Building ;
+rdfs:label "Virtual Test Building" ;
+    brick:isLocationOf 
+        bldg2:ev-hub,
+        bldg2:bldgPVGenerationSystem,
+        bldg2:bldgWeatherStation ;
+    brick:isMeteredBy bldg2:bldgPowermeter ;
+.

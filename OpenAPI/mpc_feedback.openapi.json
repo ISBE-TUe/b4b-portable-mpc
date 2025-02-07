@@ -1,0 +1,137 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/realtime-feedback": {
+            "get": {
+                "tags": [
+                    "MPC Feedback"
+                ],
+                "summary": "Get feedback from the buiding to feed the mpc.",
+                "operationId": "get_latest_ev_schedule_realtime_feedback_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "MPC Feedback"
+                ],
+                "summary": "Incoorporates real-time feedback and recalculates mpc targets",
+                "operationId": "prepare_ev_schedule_realtime_feedback_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EVScheduleRequestBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "EVScheduleRequestBody": {
+                "properties": {
+                    "from_time": {
+                        "type": "string",
+                        "title": "From Time",
+                        "description": "Start time for data retrieval",
+                        "example": "2025-02-06T18:54:43"
+                    },
+                    "to_time": {
+                        "type": "string",
+                        "title": "To Time",
+                        "description": "End time for data retrieval",
+                        "example": "2025-02-06T18:54:43"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "from_time",
+                    "to_time"
+                ],
+                "title": "EVScheduleRequestBody"
+            },
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

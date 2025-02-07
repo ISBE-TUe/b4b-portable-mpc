@@ -1,0 +1,62 @@
+<https://w3id.org/b4b/schemes/algorithms/forc#> a owl:Ontology ;
+owl:imports <https://w3id.org/b4b/schemes/algorithms/sba#> ;
+.
+
+#################################################################
+#     Classes
+#################################################################
+
+forc:Forecast
+  a owl:Class ;
+  rdfs:label "Forecast" ;
+  rdfs:subClassOf sba:AlgorithmOutput ;
+.
+
+forc:BuildingLoadForecast
+  rdf:type owl:Class ;
+  rdfs:label "BuildingLoadForecast" ;
+  brick:hasUnit unit:KiloW ;
+  rdfs:subClassOf sba:AlgorithmOutput ;
+.
+
+forc:BuildingLoadForecastMLModel
+  rdf:type owl:Class ;
+  rdfs:label "BuildingLoadForecastModel" ;
+  rdfs:subClassOf sba:MachineLearningModel ;
+.
+
+forc:WeatherForecast
+  a owl:Class ;
+  rdfs:label "WeatherForecast" ;
+  rdfs:subClassOf forc:Forecast ;
+.
+forc:WindSpeedForecast
+  a owl:Class ;
+  rdfs:label "WindSpeedForecast" ;
+  rdfs:subClassOf forc:WeatherForecast ;
+.
+
+forc:SolarRadianceForecast
+  a owl:Class ;
+  rdfs:label "SolarRadianceForecast" ;
+  rdfs:subClassOf forc:WeatherForecast ;
+.
+
+forc:OutdoorTemperatureForecast
+  a owl:Class ;
+  rdfs:label "OutdoorTemperatureForecast" ;
+  rdfs:subClassOf forc:WeatherForecast ;
+.
+
+forc:PVForecast
+  a owl:Class ;
+  rdfs:label "PVForecast" ;
+  rdfs:comment "PV generation forecast." ;
+  rdfs:subClassOf forc:Forecast ;
+.
+
+forc:ElectricityPriceForecast
+  a owl:Class ;
+  rdfs:label "ElectricityPriceForecast" ;
+  rdfs:subClassOf forc:Forecast ;
+.

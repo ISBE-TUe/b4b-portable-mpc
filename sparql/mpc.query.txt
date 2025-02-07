@@ -1,0 +1,13 @@
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+
+select * where { 
+    ?s ?p ?o .
+    FILTER(?s=mpc:DSM-MPC)
+    FILTER(?p=sba:hasInput)
+}

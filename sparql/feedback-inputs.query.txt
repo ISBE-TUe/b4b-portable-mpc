@@ -1,0 +1,55 @@
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+SELECT DISTINCT ?chrgStId1 ?timeArrId1 ?timeDeptId1 ?arrivalSOCId1 ?evBatId1 ?vFullId1 ?chrgStatusId1 ?energyId1 ?visualNumId1
+where { 
+    
+?s a brick:Electric_Vehicle_Charging_Port .
+?s eva:physical_reference "2" .
+?s brick:hasPoint ?chrgSt1, ?timeArr1, ?timeDept1, ?arrivalSOC1, ?evBat1, ?vFull1, ?chrgStatus1, ?energy1, ?visualNum1 .
+    
+?chrgSt1 a brick-ev:EV_Charging_Station_ID .
+?chrgSt1  ref:hasExternalReference ?chrgStExt1 .
+?chrgStExt1 ref:hasRealtimeControlId ?chrgStId1 .
+        
+?timeArr1 a brick-ev:EV_Arrival_Time .
+?timeArr1  ref:hasExternalReference ?timeArrExt1 .
+?timeArrExt1 ref:hasRealtimeTimeseriesId ?timeArrId1 .
+    
+?timeDept1 a brick-ev:EV_Departure_Time .
+?timeDept1  ref:hasExternalReference ?timeDeptExt1 .
+?timeDeptExt1 ref:hasRealtimeTimeseriesId ?timeDeptId1 .
+    
+?arrivalSOC1 a brick-ev:EV_Arrival_SOC .
+?arrivalSOC1  ref:hasExternalReference ?arrivalSOC1Ext .
+?arrivalSOC1Ext ref:hasRealtimeTimeseriesId ?arrivalSOCId1 .
+
+?evBat1 a brick-ev:EV_Battery_Size .
+?evBat1  ref:hasExternalReference ?evBatExt1 .
+?evBatExt1 ref:hasRealtimeTimeseriesId ?evBatId1 .
+
+?vFull1 a brick-ev:Vehicle_Full_Status .
+?vFull1  ref:hasExternalReference ?vFullExt1 .
+?vFullExt1 ref:hasRealtimeTimeseriesId ?vFullId1 .
+
+?vFull1 a brick-ev:Vehicle_Full_Status .
+?vFull1  ref:hasExternalReference ?vFullExt1 .
+?vFullExt1 ref:hasRealtimeTimeseriesId ?vFullId1 .
+
+?chrgStatus1 a brick-ev:Charging_Session_Status .
+?chrgStatus1  ref:hasExternalReference ?chrgStatusExt1 .
+?chrgStatusExt1 ref:hasRealtimeTimeseriesId ?chrgStatusId1 .
+        
+?energy1 a brick-ev:EV_Electric_Energy_Meter .
+?energy1  ref:hasExternalReference ?energyExt1 .
+?energyExt1 ref:hasHistoricalTimeseriesId ?energyId1 .
+
+?visualNum1 a brick-ev:EV_Charging_Session_Visual_Number .
+?visualNum1  ref:hasExternalReference ?visualNumExt1 .
+?visualNumExt1 ref:hasRealtimeTimeseriesId ?visualNumId1 .
+
+}
