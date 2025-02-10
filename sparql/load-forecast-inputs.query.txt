@@ -1,37 +1,37 @@
 PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
 PREFIX brick: <https://brickschema.org/schema/Brick#>
-PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
-PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
-PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> 
 
 SELECT ?WindSpeedForecast ?SolarRadianceForecast ?OutdoorTemperatureForecast ?BuildingLoad ?OutdoorTemperature ?WindSpeed ?SolarRadiance where { 
  
 ?windForc a  forc:WindSpeedForecast .
 ?windForc  ref:hasExternalReference ?windForcExt .
-?windForcExt ref:hasForecastTimeseriesId ?WindSpeedForecast .
+?windForcExt ref-ext:hasForecastTimeseriesId ?WindSpeedForecast .
 
 ?ghiForc a  forc:SolarRadianceForecast .
 ?ghiForc  ref:hasExternalReference ?ghiForcExt .
-?ghiForcExt ref:hasForecastTimeseriesId ?SolarRadianceForecast .
+?ghiForcExt ref-ext:hasForecastTimeseriesId ?SolarRadianceForecast .
 
 ?tempForc a  forc:OutdoorTemperatureForecast .
 ?tempForc  ref:hasExternalReference ?tempForcExt .
-?tempForcExt ref:hasForecastTimeseriesId ?OutdoorTemperatureForecast .
+?tempForcExt ref-ext:hasForecastTimeseriesId ?OutdoorTemperatureForecast .
 
 ?bLoad a  brick:Building_Electrical_Meter .
 ?bLoad  ref:hasExternalReference ?bLoadExt .
-?bLoadExt ref:hasHistoricalTimeseriesId ?BuildingLoad .
+?bLoadExt ref-ext:hasHistoricalTimeseriesId ?BuildingLoad .
 
 ?temp a  brick:Outside_Air_Temperature_Sensor .
 ?temp  ref:hasExternalReference ?tempExt .
-?tempExt ref:hasHistoricalTimeseriesId ?OutdoorTemperature .
+?tempExt ref-ext:hasHistoricalTimeseriesId ?OutdoorTemperature .
 
 ?windSp a  brick:Wind_Speed_Sensor .
 ?windSp  ref:hasExternalReference ?windSpExt .
-?windSpExt ref:hasHistoricalTimeseriesId ?WindSpeed .
+?windSpExt ref-ext:hasHistoricalTimeseriesId ?WindSpeed .
 
 ?ghi a  brick:Solar_Radiance_Sensor .
 ?ghi  ref:hasExternalReference ?ghiExt .
-?ghiExt ref:hasHistoricalTimeseriesId ?SolarRadiance .
+?ghiExt ref-ext:hasHistoricalTimeseriesId ?SolarRadiance .
     
 }

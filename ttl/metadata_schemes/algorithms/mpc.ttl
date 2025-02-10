@@ -48,14 +48,14 @@ mpc:DSM-MPC
         sba:RealtimeFeedback ;
     mpc:hasInputConstraint 
         sba:BuildingPowerContract,
-        brick-ev:MinimumChargingCurrentSetpoint, 
-        brick-ev:MaximumChargingCurrentSetpoint ,
+        brick-ev:Minimum_Charging_Current_Setpoint, 
+        brick-ev:Maximum_Charging_Current_Setpoint ,
         brick-ev:EV_Charger_Voltage_Rating,
         brick-ev:EV_Charger_Power_Rating,
         brick-ev:EV_Charger_Efficiency;
-    mpc:hasOutputSystemBehaviourPrediction 
-        mpc:EVChargingBehaviourPrediction, mpc:GridPowerIntakePrediction ;
-    mpc:hasOutputOptimumResults 
+    mpc:hasSystemBehaviourPrediction 
+        mpc:EVChargingPrediction, mpc:GridPowerIntakePrediction ;
+    mpc:hasOptimumResults 
         brick-ev:EVChargingCurrentSetpoint ;
-    sba:hasTimeResolution "10min";
+    mpc:hasTimeResolution "10min";
 .

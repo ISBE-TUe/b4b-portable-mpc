@@ -1,0 +1,28 @@
+shape_graph_brick_Building_Electrical_Meter.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick_Outside_Air_Temperature_Sensor.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick_Solar_Radiance_Sensor.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick_Wind_Speed_Sensor.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_OutdoorTemperatureForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_SolarRadianceForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_WindSpeedForecast.ttl
+Validation Report
+Conforms: True
+

@@ -1,0 +1,39 @@
+
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix : <urn:algorithm_shapes#> .
+
+:AlgorithmInputShape_72e928d7-8380-49e9-bf19-78d64917fdc8 
+    a sh:NodeShape ;
+    sh:targetClass forc:OutdoorTemperatureForecast ;
+    sh:property :property_1;
+.
+
+:property_1
+        sh:path ref:hasExternalReference ;
+        sh:message "All datapoints need an external reference." ;
+        sh:minCount 1 ;
+        sh:node sh:NodeShape ;
+        sh:property :property2, :property3 
+.
+
+:property2
+            sh:path rdf:type ;
+            sh:hasValue ref-ext:ForecastTimeseriesReference ;
+.
+
+:property3 
+            sh:path ref-ext:hasForecastTimeseriesId ;
+            sh:minCount 1 ;
+            sh:datatype xsd:string ;
+            sh:message "All datapoints need a timeseries reference." ;
+.
+

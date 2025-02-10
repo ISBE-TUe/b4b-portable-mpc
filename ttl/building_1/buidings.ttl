@@ -6,3 +6,13 @@ rdfs:label "Kropman Breda" ;
         bldg1:bldgWeatherStation ;
     brick:isMeteredBy bldg1:bldgPowermeter ;
 .
+
+bldg1:bldgPowermeter a brick:Building_Electrical_Meter ;
+  ref:hasExternalReference bldg1:bldg_virtual_power_histref ;
+.
+
+bldg1:bldg_virtual_power_histref a ref-ext:HistoricalTimeseriesReference ;
+rdfs:label "BuildingLoad" ;
+ref-ext:hasHistoricalTimeseriesId "f30ca6c6d2b3111dee9066951e270141.Value" ;
+ref:storedAt  bldg1:insitereports ;
+.

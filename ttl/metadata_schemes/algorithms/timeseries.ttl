@@ -1,0 +1,113 @@
+@prefix pep-ext: <https://w3id.org/b4b/schemes/ext/pep-ext#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+brick-ev:EV_Charging_Station_ID
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Arrival_Time
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Departure_Time
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Arrival_SOC
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Battery_Size
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:Vehicle_Full_Status
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:Charging_Session_Status
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Electric_Energy_Meter
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+brick-ev:EV_Charging_Session_Visual_Number
+  ref:hasExternalReference [
+    a ref-ext:RealtimeTimeseriesReference ;
+  ]
+.
+forc:PVForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+forc:BuildingLoadForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+forc:ElectricityPriceForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+mpc:EVChargingPrediction
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+mpc:GridPowerIntakePrediction
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+brick:Building_Electrical_Meter
+  ref:hasExternalReference [
+    a ref-ext:HistoricalTimeseriesReference ;
+  ]
+.
+brick:Outside_Air_Temperature_Sensor
+  ref:hasExternalReference [
+    a ref-ext:HistoricalTimeseriesReference ;
+  ]
+.
+brick:Wind_Speed_Sensor
+  ref:hasExternalReference [
+    a ref-ext:HistoricalTimeseriesReference ;
+  ]
+.
+brick:Solar_Radiance_Sensor
+  ref:hasExternalReference [
+    a ref-ext:HistoricalTimeseriesReference ;
+  ]
+.
+forc:OutdoorTemperatureForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+forc:WindSpeedForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.
+forc:SolarRadianceForecast
+  ref:hasExternalReference [
+    a ref-ext:ForecastTimeseriesReference ;
+  ]
+.

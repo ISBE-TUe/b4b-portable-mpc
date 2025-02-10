@@ -1,0 +1,12 @@
+shape_graph_forc_BuildingLoadForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_ElectricityPriceForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_PVForecast.ttl
+Validation Report
+Conforms: True
+

@@ -29,7 +29,7 @@ ref-ext:ForecastTimeseriesReference a owl:Class;
             skos:definition "The identifier for the timeseries data corresponding to this point" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path ref:hasForecastTimeseriesId ],
+            sh:path ref-ext:hasForecastTimeseriesId ],
         [ a sh:PropertyShape ;
             skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
             sh:datatype xsd:string ;
@@ -49,7 +49,7 @@ ref-ext:HistoricalTimeseriesReference a owl:Class;
             skos:definition "The identifier for the timeseries data corresponding to this point" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path ref:hasHistoricalTimeseriesId ],
+            sh:path ref-ext:hasHistoricalTimeseriesId ],
         [ a sh:PropertyShape ;
             skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
             sh:datatype xsd:string ;
@@ -69,7 +69,7 @@ ref-ext:RealtimeTimeseriesReference a owl:Class;
             skos:definition "The identifier for the timeseries data corresponding to this point" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path ref:hasRealtimeTimeseriesId ],
+            sh:path ref-ext:hasRealtimeTimeseriesId ],
         [ a sh:PropertyShape ;
             skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
             sh:datatype xsd:string ;
@@ -89,7 +89,7 @@ ref-ext:LastKnownValueTimeseriesReference a owl:Class;
             skos:definition "The identifier for the timeseries data corresponding to this point" ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path ref:hasLastKnownValueTimeseriesId ],
+            sh:path ref-ext:hasLastKnownValueTimeseriesId ],
         [ a sh:PropertyShape ;
             skos:definition "Refers to a database storing the timeseries data for the related point. Properties on this class are *to be determined*; feel free to add arbitrary properties onto Database instances for your particular deployment" ;
             sh:datatype xsd:string ;

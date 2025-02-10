@@ -39,7 +39,6 @@
 
 sba:LoadForecastAlgorithm
   rdfs:subClassOf sba:SmartBuildingAlgorithm ;
-  rdfs:label "LoadForecastModel" ;
     sba:hasInputData
         brick:Building_Electrical_Meter,
         brick:Outside_Air_Temperature_Sensor,

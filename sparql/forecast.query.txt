@@ -1,8 +1,8 @@
 PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
 PREFIX brick: <https://brickschema.org/schema/Brick#>
-PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
-PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
-PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> 
 
 select ?input where { 
     ?s ?p ?input .

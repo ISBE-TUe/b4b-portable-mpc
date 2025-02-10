@@ -25,7 +25,7 @@ sba:RealtimeFeedbackAlgorithm
 sba:RealtimeFeedback
   rdf:type owl:Class ;
   rdfs:label "RealtimeFeedback" ;
-  rdfs:subClassOf sba:AlgorithmOutput ;
+  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput ;
 .
 
 sba:MachineLearningModel
@@ -37,6 +37,12 @@ sba:MachineLearningModel
 sba:AlgorithmOutput
   a owl:Class ;
   rdfs:label "AlgorithmOutput" ;
+  rdfs:subClassOf ssn:Input, ssn:Output  ;
+.
+
+sba:AlgorithmInput
+  a owl:Class ;
+  rdfs:label "AlgorithmInput" ;
   rdfs:subClassOf ssn:Input, ssn:Output  ;
 .
 

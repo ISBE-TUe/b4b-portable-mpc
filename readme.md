@@ -4,8 +4,17 @@ This repository contains the schemas and semantic models developed for the [Ener
 
 # Folder structure
 
+## `config`
+Contains the generated configuration files. 
+
 ## `OpenAPI`
 Contains the OpenAPI specification of each modular service in the MPC System.  
+
+## `shacl`
+Contains the semantic graphs of the virtual building that was used for testing semantic-driven portability service. 
+
+## `sparql`
+Contains the sparql queries used to query the metadata schemes and semantic building graphs. 
 
 ## `ttl/metadata_schemes/new_schemes`
 Contains the reused and proposed schemas for, MPC (mpc_schema.ttl), Forecasting Algorithm (forecast_schema.ttl), and Smart Building Algorithm Schema (sba-schema.ttl).  
@@ -21,6 +30,9 @@ Contains the semantic graphs of the original building that was used for testing 
 
 ## `ttl/building2`
 Contains the semantic graphs of the virtual building that was used for testing semantic-driven portability service. 
+
+## `validation`
+Contains the shacl validation reports of the two test buildings.
 
 # Demonstration
 

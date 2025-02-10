@@ -9,14 +9,13 @@ owl:imports <https://w3id.org/b4b/schemes/algorithms/sba#> ;
 forc:Forecast
   a owl:Class ;
   rdfs:label "Forecast" ;
-  rdfs:subClassOf sba:AlgorithmOutput ;
 .
 
 forc:BuildingLoadForecast
   rdf:type owl:Class ;
   rdfs:label "BuildingLoadForecast" ;
   brick:hasUnit unit:KiloW ;
-  rdfs:subClassOf sba:AlgorithmOutput ;
+  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput ;
 .
 
 forc:BuildingLoadForecastMLModel
@@ -30,6 +29,7 @@ forc:WeatherForecast
   rdfs:label "WeatherForecast" ;
   rdfs:subClassOf forc:Forecast ;
 .
+
 forc:WindSpeedForecast
   a owl:Class ;
   rdfs:label "WindSpeedForecast" ;
@@ -53,10 +53,12 @@ forc:PVForecast
   rdfs:label "PVForecast" ;
   rdfs:comment "PV generation forecast." ;
   rdfs:subClassOf forc:Forecast ;
+  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput ;
 .
 
 forc:ElectricityPriceForecast
   a owl:Class ;
   rdfs:label "ElectricityPriceForecast" ;
   rdfs:subClassOf forc:Forecast ;
+  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput ;
 .

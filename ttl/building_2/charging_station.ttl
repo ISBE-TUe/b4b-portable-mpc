@@ -21,8 +21,8 @@ bldg2:station2 a brick:Electric_Vehicle_Charging_Station ;
 .
 
 bldg2:port1 a brick:Electric_Vehicle_Charging_Port ;
-    eva:identifier "1" ;
-    eva:physical_reference "1" ;
+    bldg2:identifier "1" ;
+    bldg2:physical_reference "1" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -31,7 +31,7 @@ bldg2:port1 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg2:bldgEVChargerEnergyMeter_1 ;
     brick:hasPoint bldg2:bldgEVChargerCurrentMeter_1 ;
     brick:hasPoint bldg2:charging_status_id1 ;
-    brick:hasPoint bldg2:vehicle_full_status_id1 ;
+    # brick:hasPoint bldg2:vehicle_full_status_id1 ;
     brick:hasPoint bldg2:visual_number_id1 ;
     brick:hasPoint bldg2:battery_size_id1 ;
     brick:hasPoint bldg2:arrival_time_id1 ;
@@ -45,23 +45,23 @@ bldg2:charging_station_id1 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg2:charging_station_id1_ref ;
 .
 
-bldg2:charging_station_id1_ref a ref:RealtimeControlReference ;
-  ref:hasRealtimeControlId "1" ;
+bldg2:charging_station_id1_ref a ref-ext:RealtimeTimeseriesReference ;
+  ref-ext:hasRealtimeTimeseriesId "1" ;
 .
 
 bldg2:charging_current_setpoint_id1 a brick-ev:EVChargingCurrentSetpoint ;
     ref:hasExternalReference bldg2:bldgEVCharger_1_current_setpoint ;
 .
 
-bldg2:bldgEVCharger_1_current_setpoint a ref:RealtimeControlReference ;
+bldg2:bldgEVCharger_1_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "ChargingCurrentSetpoint_Id1" ;
-  ref:hasRealtimeControlId "id1.MaxAmpere" ;
+  ref-ext:hasRealtimeTimeseriesId "id1.MaxAmpere" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
 bldg2:port2 a brick:Electric_Vehicle_Charging_Port ;
-    eva:identifier "2" ;
-    eva:physical_reference "2" ;
+    bldg2:identifier "2" ;
+    bldg2:physical_reference "2" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -70,7 +70,7 @@ bldg2:port2 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg2:bldgEVChargerEnergyMeter_2 ;
     brick:hasPoint bldg2:bldgEVChargerCurrentMeter_2 ;
     brick:hasPoint bldg2:charging_status_id2 ;
-    brick:hasPoint bldg2:vehicle_full_status_id2 ;
+    # brick:hasPoint bldg2:vehicle_full_status_id2 ;
     brick:hasPoint bldg2:visual_number_id2 ;
     brick:hasPoint bldg2:battery_size_id2 ;
     brick:hasPoint bldg2:arrival_time_id2 ;
@@ -84,23 +84,23 @@ bldg2:charging_station_id2 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg2:charging_station_id2_ref ;
 .
 
-bldg2:charging_station_id2_ref a ref:RealtimeControlReference ;
-  ref:hasRealtimeControlId "2" ;
+bldg2:charging_station_id2_ref a ref-ext:RealtimeTimeseriesReference ;
+  ref-ext:hasRealtimeTimeseriesId "2" ;
 .
 bldg2:charging_current_setpoint_id2 a brick-ev:EVChargingCurrentSetpoint ;
     ref:hasExternalReference bldg2:bldgEVCharger_2_current_setpoint ;
 .
 
-bldg2:bldgEVCharger_2_current_setpoint a ref:RealtimeControlReference ;
+bldg2:bldgEVCharger_2_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "ChargingCurrentSetpoint_Id2" ;
-  ref:hasRealtimeControlId "id2.MaxAmpere" ;
+  ref-ext:hasRealtimeTimeseriesId "id2.MaxAmpere" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
 
 bldg2:port3 a brick:Electric_Vehicle_Charging_Port ;
-    eva:identifier "3" ;
-    eva:physical_reference "3" ;
+    bldg2:identifier "3" ;
+    bldg2:physical_reference "3" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -109,7 +109,7 @@ bldg2:port3 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg2:bldgEVChargerEnergyMeter_3 ;
     brick:hasPoint bldg2:bldgEVChargerCurrentMeter_3 ;
     brick:hasPoint bldg2:charging_status_id3 ;
-    brick:hasPoint bldg2:vehicle_full_status_id3 ;
+    # brick:hasPoint bldg2:vehicle_full_status_id3 ;
     brick:hasPoint bldg2:visual_number_id3 ;
     brick:hasPoint bldg2:battery_size_id3 ;
     brick:hasPoint bldg2:arrival_time_id3 ;
@@ -123,24 +123,24 @@ bldg2:charging_station_id3 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg2:charging_station_id3_ref ;
 .
 
-bldg2:charging_station_id3_ref a ref:RealtimeControlReference ;
-  ref:hasRealtimeControlId "3" ;
+bldg2:charging_station_id3_ref a ref-ext:RealtimeTimeseriesReference ;
+  ref-ext:hasRealtimeTimeseriesId "3" ;
 .
 
 bldg2:charging_current_setpoint_id3 a brick-ev:EVChargingCurrentSetpoint ;
     ref:hasExternalReference bldg2:bldgEVCharger_3_current_setpoint ;
 .
 
-bldg2:bldgEVCharger_3_current_setpoint a ref:RealtimeControlReference ;
+bldg2:bldgEVCharger_3_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "ChargingCurrentSetpoint_Id3" ;
-  ref:hasRealtimeControlId "id3.MaxAmpere" ;
+  ref-ext:hasRealtimeTimeseriesId "id3.MaxAmpere" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
 
 bldg2:port4 a brick:Electric_Vehicle_Charging_Port ;
-    eva:identifier "4" ;
-    eva:physical_reference "4" ;
+    bldg2:identifier "4" ;
+    bldg2:physical_reference "4" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -149,7 +149,7 @@ bldg2:port4 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg2:bldgEVChargerEnergyMeter_4 ;
     brick:hasPoint bldg2:bldgEVChargerCurrentMeter_4 ;
     brick:hasPoint bldg2:charging_status_id4 ;
-    brick:hasPoint bldg2:vehicle_full_status_id4 ;
+    # brick:hasPoint bldg2:vehicle_full_status_id4 ;
     brick:hasPoint bldg2:visual_number_id4 ;
     brick:hasPoint bldg2:battery_size_id4 ;
     brick:hasPoint bldg2:arrival_time_id4 ;
@@ -163,17 +163,17 @@ bldg2:charging_station_id4 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg2:charging_station_id4_ref ;
 .
 
-bldg2:charging_station_id4_ref a ref:RealtimeControlReference ;
-  ref:hasRealtimeControlId "4" ;
+bldg2:charging_station_id4_ref a ref-ext:RealtimeTimeseriesReference ;
+  ref-ext:hasRealtimeTimeseriesId "4" ;
 .
 
 bldg2:charging_current_setpoint_id4 a brick-ev:EVChargingCurrentSetpoint ;
     ref:hasExternalReference bldg2:bldgEVCharger_4_current_setpoint ;
 .
 
-bldg2:bldgEVCharger_4_current_setpoint a ref:RealtimeControlReference ;
+bldg2:bldgEVCharger_4_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "ChargingCurrentSetpoint_Id4" ;
-  ref:hasRealtimeControlId "id4.MaxAmpere" ;
+  ref-ext:hasRealtimeTimeseriesId "id4.MaxAmpere" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -182,9 +182,9 @@ bldg2:bldgEVChargerPowerMeter_1  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerPowerMeter_1_histref ;
 .
 
-bldg2:bldgEVChargerPowerMeter_1_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerPowerMeter_1_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_1" ;
-  ref:hasHistoricalTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.AVERAGE_POWER$value" ;
+  ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.AVERAGE_POWER$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -193,9 +193,9 @@ bldg2:bldgEVChargerEnergyMeter_1  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg2:bldgEVChargerEnergyMeter_1_histref ;
 .
 
-bldg2:bldgEVChargerEnergyMeter_1_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerEnergyMeter_1_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "energy_id1" ;
-  ref:hasRealtimeTimeseriesId  "759ca9cc4f3bf8f552084d67f25d45899.kwh" ;
+  ref-ext:hasRealtimeTimeseriesId  "759ca9cc4f3bf8f552084d67f25d45899.kwh" ;
   ref:storedAt  bldg2:insiteview ;
 . 
 
@@ -204,9 +204,9 @@ bldg2:bldgEVChargerPowerMeter_2  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerPowerMeter_2_histref ;
 .
 
-bldg2:bldgEVChargerPowerMeter_2_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerPowerMeter_2_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_2" ;
-  ref:hasHistoricalTimeseriesId "cd8afb76be06cc43e288041260df100eb.AVERAGE_POWER$value" ;
+  ref-ext:hasRealtimeTimeseriesId "cd8afb76be06cc43e288041260df100eb.AVERAGE_POWER$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -215,9 +215,9 @@ bldg2:bldgEVChargerEnergyMeter_2  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg2:bldgEVChargerEnergyMeter_2_histref ;
 .
 
-bldg2:bldgEVChargerEnergyMeter_2_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerEnergyMeter_2_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "energy_id2" ;
-  ref:hasHistoricalTimeseriesId  "1cb94c6d3ecd7c90b08317ad11121a31c.kwh" ;
+  ref-ext:hasRealtimeTimeseriesId  "1cb94c6d3ecd7c90b08317ad11121a31c.kwh" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -226,9 +226,9 @@ bldg2:bldgEVChargerPowerMeter_3  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerPowerMeter_3_histref ;
 .
 
-bldg2:bldgEVChargerPowerMeter_3_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerPowerMeter_3_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_3" ;
-  ref:hasHistoricalTimeseriesId "9fd044a2806b252458d24a054ecf0f145.AVERAGE_POWER$value" ;
+  ref-ext:hasRealtimeTimeseriesId "9fd044a2806b252458d24a054ecf0f145.AVERAGE_POWER$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -237,9 +237,9 @@ bldg2:bldgEVChargerEnergyMeter_3  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg2:bldgEVChargerEnergyMeter_3_histref ;
 .
 
-bldg2:bldgEVChargerEnergyMeter_3_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerEnergyMeter_3_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "energy_id3" ;
-  ref:hasHistoricalTimeseriesId  "f10dc57115f3546ff2ccb745362c73c96.kwh" ;
+  ref-ext:hasRealtimeTimeseriesId  "f10dc57115f3546ff2ccb745362c73c96.kwh" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -248,9 +248,9 @@ bldg2:bldgEVChargerPowerMeter_4  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerPowerMeter_4_histref ;
 .
 
-bldg2:bldgEVChargerPowerMeter_4_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerPowerMeter_4_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_4" ;
-  ref:hasHistoricalTimeseriesId "737bf181efc276eec62f75bc34a171dd2.AVERAGE_POWER$value" ;
+  ref-ext:hasRealtimeTimeseriesId "737bf181efc276eec62f75bc34a171dd2.AVERAGE_POWER$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -259,9 +259,9 @@ bldg2:bldgEVChargerEnergyMeter_4  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg2:bldgEVChargerEnergyMeter_4_histref ;
 .
 
-bldg2:bldgEVChargerEnergyMeter_4_histref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerEnergyMeter_4_histref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "energy_id4" ;
-  ref:hasHistoricalTimeseriesId  "83a9cd04a4852e57bc3918762d1a049f3.kwh" ;
+  ref-ext:hasRealtimeTimeseriesId  "83a9cd04a4852e57bc3918762d1a049f3.kwh" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -270,9 +270,9 @@ bldg2:bldgEVChargerCurrentMeter_1 a brick-ev:EV_Load_Current_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerCurrentMeter_1_rtref ;
 .
 
-bldg2:bldgEVChargerCurrentMeter_1_rtref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerCurrentMeter_1_rtref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerCurrentMeter_1" ;
-  ref:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.CURRENT_L1$value" ;
+  ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.CURRENT_L1$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -281,9 +281,9 @@ bldg2:bldgEVChargerCurrentMeter_2 a brick-ev:EV_Load_Current_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerCurrentMeter_2_rtref ;
 .
 
-bldg2:bldgEVChargerCurrentMeter_2_rtref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerCurrentMeter_2_rtref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerCurrentMeter_2" ;
-  ref:hasRealtimeTimeseriesId "cd8afb76be06cc43e288041260df100eb.CURRENT_L1$value" ;
+  ref-ext:hasRealtimeTimeseriesId "cd8afb76be06cc43e288041260df100eb.CURRENT_L1$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -292,9 +292,9 @@ bldg2:bldgEVChargerCurrentMeter_3 a brick-ev:EV_Load_Current_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerCurrentMeter_3_rtref ;
 .
 
-bldg2:bldgEVChargerCurrentMeter_3_rtref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerCurrentMeter_3_rtref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerCurrentMeter_3" ;
-  ref:hasRealtimeTimeseriesId "9fd044a2806b252458d24a054ecf0f145.CURRENT_L1$value" ;
+  ref-ext:hasRealtimeTimeseriesId "9fd044a2806b252458d24a054ecf0f145.CURRENT_L1$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -303,9 +303,9 @@ bldg2:bldgEVChargerCurrentMeter_4 a brick-ev:EV_Load_Current_Sensor ;
   ref:hasExternalReference bldg2:bldgEVChargerCurrentMeter_4_rtref ;
 .
 
-bldg2:bldgEVChargerCurrentMeter_4_rtref a ref:HistoricalTimeseriesReference ;
+bldg2:bldgEVChargerCurrentMeter_4_rtref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerCurrentMeter_4" ;
-  ref:hasRealtimeTimeseriesId "737bf181efc276eec62f75bc34a171dd2.CURRENT_L1$value" ;
+  ref-ext:hasRealtimeTimeseriesId "737bf181efc276eec62f75bc34a171dd2.CURRENT_L1$value" ;
   ref:storedAt  bldg2:insiteview ;
 .
 
@@ -313,9 +313,9 @@ bldg2:charging_status_id1 a brick-ev:Charging_Session_Status ;
   ref:hasExternalReference bldg2:charging_status_id1_rtref ;
 .
 
-bldg2:charging_status_id1_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:charging_status_id1_rtref a ref-ext:RealtimeTimeseriesReference ;
   rdfs:label "charging_status_id1" ;
-    ref:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.status" ;
+    ref-ext:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.status" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -323,9 +323,9 @@ bldg2:charging_status_id2 a brick-ev:Charging_Session_Status ;
   ref:hasExternalReference bldg2:charging_status_id2_rtref ;
   .
 
-bldg2:charging_status_id2_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:charging_status_id2_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "charging_status_id2" ;
-    ref:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.status" ;
+    ref-ext:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.status" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -333,9 +333,9 @@ bldg2:charging_status_id3 a brick-ev:Charging_Session_Status ;
   ref:hasExternalReference bldg2:charging_status_id3_rtref ;
 .
 
-bldg2:charging_status_id3_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:charging_status_id3_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "charging_status_id3" ;
-    ref:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.status" ;
+    ref-ext:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.status" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -343,59 +343,59 @@ bldg2:charging_status_id4 a brick-ev:Charging_Session_Status ;
   ref:hasExternalReference bldg2:charging_status_id4_rtref ;
 .
 
-bldg2:charging_status_id4_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:charging_status_id4_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "charging_status_id4" ;
-    ref:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.status" ;
+    ref-ext:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.status" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
-bldg2:vehicle_full_status_id1 a brick-ev:Vehicle_Full_Status ;
-  ref:hasExternalReference bldg2:vehicle_full_status_id1_rtref ;
-.
+# bldg2:vehicle_full_status_id1 a brick-ev:Vehicle_Full_Status ;
+#   ref:hasExternalReference bldg2:vehicle_full_status_id1_rtref ;
+# .
 
-bldg2:vehicle_full_status_id1_rtref a ref:RealtimeTimeseriesReference ;
-    rdfs:label "vehicle_full_status_id1" ;
-    ref:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.vehicle_full_date" ;
-    ref:storedAt  bldg2:insiteview ;
-.
+# bldg2:vehicle_full_status_id1_rtref a ref-ext:RealtimeTimeseriesReference ;
+#     rdfs:label "vehicle_full_status_id1" ;
+#     ref-ext:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.vehicle_full_date" ;
+#     ref:storedAt  bldg2:insiteview ;
+# .
 
-bldg2:vehicle_full_status_id2 a brick-ev:Vehicle_Full_Status ;
-  ref:hasExternalReference bldg2:vehicle_full_status_id2_rtref ;
-  .
+# bldg2:vehicle_full_status_id2 a brick-ev:Vehicle_Full_Status ;
+#   ref:hasExternalReference bldg2:vehicle_full_status_id2_rtref ;
+#   .
 
-bldg2:vehicle_full_status_id2_rtref a ref:RealtimeTimeseriesReference ;
-    rdfs:label "vehicle_full_status_id2" ;
-    ref:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.vehicle_full_date" ;
-    ref:storedAt  bldg2:insiteview ;
-.
+# bldg2:vehicle_full_status_id2_rtref a ref-ext:RealtimeTimeseriesReference ;
+#     rdfs:label "vehicle_full_status_id2" ;
+#     ref-ext:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.vehicle_full_date" ;
+#     ref:storedAt  bldg2:insiteview ;
+# .
 
-bldg2:vehicle_full_status_id3 a brick-ev:Vehicle_Full_Status ;
-  ref:hasExternalReference bldg2:vehicle_full_status_id3_rtref ;
-.
+# bldg2:vehicle_full_status_id3 a brick-ev:Vehicle_Full_Status ;
+#   ref:hasExternalReference bldg2:vehicle_full_status_id3_rtref ;
+# .
 
-bldg2:vehicle_full_status_id3_rtref a ref:RealtimeTimeseriesReference ;
-    rdfs:label "vehicle_full_status_id3" ;
-    ref:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.vehicle_full_date" ;
-    ref:storedAt  bldg2:insiteview ;
-.
+# bldg2:vehicle_full_status_id3_rtref a ref-ext:RealtimeTimeseriesReference ;
+#     rdfs:label "vehicle_full_status_id3" ;
+#     ref-ext:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.vehicle_full_date" ;
+#     ref:storedAt  bldg2:insiteview ;
+# .
 
-bldg2:vehicle_full_status_id4 a brick-ev:Vehicle_Full_Status ;
-  ref:hasExternalReference bldg2:vehicle_full_status_id4_rtref ;
-.
+# bldg2:vehicle_full_status_id4 a brick-ev:Vehicle_Full_Status ;
+#   ref:hasExternalReference bldg2:vehicle_full_status_id4_rtref ;
+# .
 
-bldg2:vehicle_full_status_id4_rtref a ref:RealtimeTimeseriesReference ;
-    rdfs:label "vehicle_full_status_id4" ;
-    ref:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.vehicle_full_date" ;
-    ref:storedAt  bldg2:insiteview ;
-.
+# bldg2:vehicle_full_status_id4_rtref a ref-ext:RealtimeTimeseriesReference ;
+#     rdfs:label "vehicle_full_status_id4" ;
+#     ref-ext:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.vehicle_full_date" ;
+#     ref:storedAt  bldg2:insiteview ;
+# .
 
 bldg2:visual_number_id1 a brick-ev:EV_Charging_Session_Visual_Number  ;
   ref:hasExternalReference bldg2:visual_number_id1_rtref ;
 .
 
-bldg2:visual_number_id1_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:visual_number_id1_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "visual_number_id1" ;
-    ref:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.visual_number" ;
+    ref-ext:hasRealtimeTimeseriesId "759ca9cc4f3bf8f552084d67f25d4589.visual_number" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -403,9 +403,9 @@ bldg2:visual_number_id2 a brick-ev:EV_Charging_Session_Visual_Number  ;
   ref:hasExternalReference bldg2:visual_number_id2_rtref ;
 .
 
-bldg2:visual_number_id2_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:visual_number_id2_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "visual_number_id2" ;
-    ref:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.visual_number" ;
+    ref-ext:hasRealtimeTimeseriesId "1cb94c6d3ecd7c90b08317ad11121a31.visual_number" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -413,9 +413,9 @@ bldg2:visual_number_id3 a brick-ev:EV_Charging_Session_Visual_Number  ;
   ref:hasExternalReference bldg2:visual_number_id3_rtref ;
 .
 
-bldg2:visual_number_id3_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:visual_number_id3_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "visual_number_id3" ;
-    ref:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.visual_number" ;
+    ref-ext:hasRealtimeTimeseriesId "f10dc57115f3546ff2ccb745362c73c9.visual_number" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -423,9 +423,9 @@ bldg2:visual_number_id4 a brick-ev:EV_Charging_Session_Visual_Number  ;
   ref:hasExternalReference bldg2:visual_number_id4_rtref ;
 .
 
-bldg2:visual_number_id4_rtref a ref:RealtimeTimeseriesReference ;
+bldg2:visual_number_id4_rtref a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "visual_number_id4" ;
-    ref:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.visual_number" ;
+    ref-ext:hasRealtimeTimeseriesId "83a9cd04a4852e57bc3918762d1a049f.visual_number" ;
     ref:storedAt  bldg2:insiteview ;
 .
 
@@ -490,8 +490,8 @@ bldg2:departure_time_id4 a brick-ev:EV_Departure_Time ;
   ref:hasExternalReference bldg2:welkom_kropman_records ;
 .
 
-bldg2:welkom_kropman_records a ref:RealtimeTimeseriesReference ;
+bldg2:welkom_kropman_records a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "welkom_kropman_records" ;
-    ref:hasRealtimeTimeseriesId "evse/welkomkropman" ;
+    ref-ext:hasRealtimeTimeseriesId "evse/welkomkropman" ;
     ref:storedAt  bldg2:insiteview ;
 .

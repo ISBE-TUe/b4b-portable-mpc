@@ -1,2 +1,2 @@
-@prefix bldg1: <urn:my_building_1#> .
-@prefix bldg2: <urn:my_building_2#> .
+@prefix bldg1: <urn:building_kropman#> .
+@prefix bldg2: <urn:building_v1#> .
