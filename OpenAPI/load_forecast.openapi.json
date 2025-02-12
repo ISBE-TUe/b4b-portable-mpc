@@ -149,43 +149,43 @@
                         "type": "string",
                         "title": "Building Load",
                         "description": "Past two weeks building load",
-                        "example": "f30ca6c6d2b3111dee9066951e270141.Value"
+                        "example": "f30ca6c6d2b3111dee9066951e270141"
                     },
                     "outdoor_temp": {
                         "type": "string",
                         "title": "Outdoor Temp",
                         "description": "Past two weeks outdoor temperature",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "ghi": {
                         "type": "string",
                         "title": "Ghi",
                         "description": "Past two weeks outdoor ghi",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "wind_speed": {
                         "type": "string",
                         "title": "Wind Speed",
                         "description": "Past two weeks outdoor wind speed",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "outdoor_temp_forecast": {
                         "type": "string",
                         "title": "Outdoor Temp Forecast",
                         "description": "outdoor temperature forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     },
                     "ghi_forecast": {
                         "type": "string",
                         "title": "Ghi Forecast",
                         "description": "outdoor ghi forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     },
                     "wind_speed_forecast": {
                         "type": "string",
                         "title": "Wind Speed Forecast",
                         "description": "outdoor wind speed forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     }
                 },
                 "type": "object",
@@ -274,43 +274,43 @@
                         "type": "string",
                         "title": "Building Load",
                         "description": "Past two weeks building load",
-                        "example": "f30ca6c6d2b3111dee9066951e270141.Value"
+                        "example": "f30ca6c6d2b3111dee9066951e270141"
                     },
                     "outdoor_temp": {
                         "type": "string",
                         "title": "Outdoor Temp",
                         "description": "Past two weeks outdoor temperature",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "ghi": {
                         "type": "string",
                         "title": "Ghi",
                         "description": "Past two weeks outdoor ghi",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "wind_speed": {
                         "type": "string",
                         "title": "Wind Speed",
                         "description": "Past two weeks outdoor wind speed",
-                        "example": "a683b494a806af9a8da4d35ae99ba763.Value"
+                        "example": "a683b494a806af9a8da4d35ae99ba763"
                     },
                     "outdoor_temp_forecast": {
                         "type": "string",
                         "title": "Outdoor Temp Forecast",
                         "description": "outdoor temperature forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     },
                     "ghi_forecast": {
                         "type": "string",
                         "title": "Ghi Forecast",
                         "description": "outdoor ghi forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     },
                     "wind_speed_forecast": {
                         "type": "string",
                         "title": "Wind Speed Forecast",
                         "description": "outdoor wind speed forecast",
-                        "example": "3ede3817d96d7bb87865eaa7ac657860.Value"
+                        "example": "3ede3817d96d7bb87865eaa7ac657860"
                     }
                 },
                 "type": "object",

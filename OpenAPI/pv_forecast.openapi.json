@@ -41,7 +41,7 @@
                             "title": "Realtime Ref"
                         },
                         "description": "The reference to realtime data point according to metadata graph",
-                        "example": "1cb9d9b555b336abe33f990c32ae06fd.Value"
+                        "example": "1cb9d9b555b336abe33f990c32ae06fd"
                     }
                 ],
                 "responses": {

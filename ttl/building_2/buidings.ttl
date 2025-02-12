@@ -13,6 +13,6 @@ bldg2:bldgPowermeter a brick:Building_Electrical_Meter ;
 
 bldg2:bldg_virtual_power_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "BuildingLoad" ;
-ref-ext:hasHistoricalTimeseriesId "f30ca6c6d2b3111dee9066951e270141.Value" ;
+ref-ext:hasHistoricalTimeseriesId "f30ca6c6d2b3111dee9066951e270141" ;
 ref:storedAt  bldg2:insitereports ;
 .

@@ -17,7 +17,7 @@ bldg2:bldgOutdoorTemperatureForecast  a forc:OutdoorTemperatureForecast ;
 
 bldg2:bldgOutdoorTemperatureForecast_forecastref a ref-ext:ForecastTimeseriesReference ;
 rdfs:label "OutdoorTemperatureForecast" ;
-  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860" ;
   ref:storedAt  bldg2:insitereports ;
 .
 
@@ -28,7 +28,7 @@ bldg2:bldgSolarRadianceForecast a forc:SolarRadianceForecast ;
 
 bldg2:bldgSolarRadianceForecast_forecastref a ref-ext:ForecastTimeseriesReference ;
 rdfs:label "SolarRadianceForecast" ;
-  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860" ;
   ref:storedAt  bldg2:insitereports ;
 .
 
@@ -39,7 +39,7 @@ bldg2:bldgWindSpeedForecast a forc:WindSpeedForecast ;
 
 bldg2:bldgWindSpeedForecast_forecastref a ref-ext:ForecastTimeseriesReference ;
 rdfs:label "WindSpeedForecast" ;
-  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860.Value" ;
+  ref-ext:hasForecastTimeseriesId "3ede3817d96d7bb87865eaa7ac657860" ;
   ref:storedAt  bldg2:insitereports ;
 .
 
@@ -49,7 +49,7 @@ bldg2:bldgPVForecast a forc:PVForecast ;
 
 bldg2:bldgPV_ref a ref-ext:ForecastTimeseriesReference ;
     rdfs:label "PVForecast" ;
-    ref-ext:hasForecastTimeseriesId  "1cb9d9b555b336abe33f990c32ae06fd.Value" ; 
+    ref-ext:hasForecastTimeseriesId  "1cb9d9b555b336abe33f990c32ae06fd" ; 
     ref:storedAt  bldg2:insitereports ;
 .
 

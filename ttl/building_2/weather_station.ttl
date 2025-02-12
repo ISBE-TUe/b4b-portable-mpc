@@ -12,7 +12,7 @@ bldg2:bldgOutdoorTemperatureSensor  a brick:Outside_Air_Temperature_Sensor ;
 
 bldg2:bldgOutdoorTemperatureSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "OutdoorTemperature" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
     ref:storedAt  bldg2:insitereports ;
 .
 
@@ -25,7 +25,7 @@ bldg2:bldgSolarRadianceSensor a brick:Solar_Radiance_Sensor
 
 bldg2:bldgSolarRadianceSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "SolarRadiance" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
     ref:storedAt  bldg2:insitereports ;
 .
 
@@ -37,7 +37,7 @@ bldg2:bldgWindSpeedSensor a brick:Wind_Speed_Sensor
 
 # bldg2:bldgWindSpeedSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 # rdfs:label "WindSpeed" ;
-#     ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+#     ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
 #     ref:storedAt  bldg2:insitereports ;
 # .
 

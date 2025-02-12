@@ -12,7 +12,7 @@ bldg1:bldgOutdoorTemperatureSensor  a brick:Outside_Air_Temperature_Sensor ;
 
 bldg1:bldgOutdoorTemperatureSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "OutdoorTemperature" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
     ref:storedAt  bldg1:insitereports ;
 .
 
@@ -25,7 +25,7 @@ bldg1:bldgSolarRadianceSensor a brick:Solar_Radiance_Sensor
 
 bldg1:bldgSolarRadianceSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "SolarRadiance" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
     ref:storedAt  bldg1:insitereports ;
 .
 
@@ -37,7 +37,7 @@ bldg1:bldgWindSpeedSensor a brick:Wind_Speed_Sensor
 
 bldg1:bldgWindSpeedSensor_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "WindSpeed" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763.Value" ;
+    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
     ref:storedAt  bldg1:insitereports ;
 .
 
@@ -46,7 +46,7 @@ rdfs:label "WindSpeed" ;
 #   brick:hasUnit unit:DEG_C ;
 #   ref:hasExternalReference [
 #     a ref:TimeseriesReference ;
-#     ref:hasTimeseriesId "72c2b8fe65bbf5ec36f5597607840efd899.Value" ;
+#     ref:hasTimeseriesId "72c2b8fe65bbf5ec36f5597607840efd899" ;
 #     ref:storedAt  bldg1:insiteview ;
 #   ] ;
 # .
@@ -57,7 +57,7 @@ rdfs:label "WindSpeed" ;
 #   brick:hasUnit unit:W-PER-M2 ;
 #   ref:hasExternalReference [
 #     a ref:TimeseriesReference ;
-#     ref:hasTimeseriesId "1169d3bd913687e15a14de9ac1929a27897.Value" ;
+#     ref:hasTimeseriesId "1169d3bd913687e15a14de9ac1929a27897" ;
 #     ref:storedAt  bldg1:insiteview ;
 #   ] ;
 # .
@@ -68,7 +68,7 @@ rdfs:label "WindSpeed" ;
 #   brick:hasUnit unit:M-PER-SEC ;
 #   ref:hasExternalReference [
 #     a ref:TimeseriesReference ;
-#     ref:hasTimeseriesId "2449647f48cbab178add9274631078b6895.Value" ;
+#     ref:hasTimeseriesId "2449647f48cbab178add9274631078b6895" ;
 #     ref:storedAt  bldg1:insiteview ;
 #   ] ;
 # .
