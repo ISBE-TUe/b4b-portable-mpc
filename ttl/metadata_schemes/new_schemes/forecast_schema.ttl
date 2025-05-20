@@ -15,7 +15,7 @@ forc:BuildingLoadForecast
   rdf:type owl:Class ;
   rdfs:label "BuildingLoadForecast" ;
   brick:hasUnit unit:KiloW ;
-  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput ;
+  rdfs:subClassOf sba:AlgorithmOutput, sba:AlgorithmInput, forc:Forecast ;
 .
 
 forc:BuildingLoadForecastMLModel
