@@ -74,7 +74,12 @@ mpc:hasOutputOptimumResults
     rdfs:subPropertyOf sba:hasOutput
 .
 
-mpc:hasTimeResolution a owl:DatatypeProperty ;
-    rdfs:domain sba:SmartBuildingAlgorithm ;
-    rdfs:range xsd:string ;
-.
+# mpc:hasTimeResolution a owl:DatatypeProperty ;
+#     rdfs:domain sba:SmartBuildingAlgorithm ;
+#     rdfs:range xsd:string ;
+# .
+
+# mpc:hasPredictionHorizon a owl:DatatypeProperty ;
+#     rdfs:domain sba:SmartBuildingAlgorithm ;
+#     rdfs:range xsd:string ;
+# .

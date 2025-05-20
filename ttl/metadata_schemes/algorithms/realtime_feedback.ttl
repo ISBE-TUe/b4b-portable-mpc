@@ -37,7 +37,7 @@
 @prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
 
 
-sba:RealtimeFeedbackAlgorithm
+sba:EVRealtimeFeedbackAlgorithm
   rdfs:subClassOf sba:SmartBuildingAlgorithm;
   rdfs:label "RealtimeFeedback" ;
     sba:hasInputData
@@ -50,6 +50,6 @@ sba:RealtimeFeedbackAlgorithm
         brick-ev:Charging_Session_Status,
         brick-ev:EV_Electric_Energy_Meter,
         brick-ev:EV_Charging_Session_Visual_Number ;
-    sba:hasOutput sba:RealtimeFeedback ;
+    sba:hasOutput sba:EVRealtimeFeedback ;
   sba:hasTimeResolution "10min";
 .

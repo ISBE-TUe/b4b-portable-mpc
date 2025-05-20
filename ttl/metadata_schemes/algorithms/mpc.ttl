@@ -45,7 +45,7 @@ mpc:DSM-MPC
         forc:BuildingLoadForecast , 
         forc:ElectricityPriceForecast ;
     mpc:hasInputRealtimeFeedback
-        sba:RealtimeFeedback ;
+        sba:EVRealtimeFeedback ;
     mpc:hasInputConstraint 
         sba:BuildingPowerContract,
         brick-ev:Minimum_Charging_Current_Setpoint, 
@@ -57,5 +57,6 @@ mpc:DSM-MPC
         mpc:EVChargingPrediction, mpc:GridPowerIntakePrediction ;
     mpc:hasOptimumResults 
         brick-ev:EVChargingCurrentSetpoint ;
-    mpc:hasTimeResolution "10min";
+    sba:hasTimeResolution "10min";
+    sba:hasPredictionHorizon "Receeding Horizon 12H to 10min" ;
 .

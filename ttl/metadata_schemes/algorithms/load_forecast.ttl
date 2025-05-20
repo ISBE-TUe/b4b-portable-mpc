@@ -51,5 +51,6 @@ sba:LoadForecastAlgorithm
         sba:BuildingLoadForecastMLModel ;
     sba:hasPredictionOutput
         forc:BuildingLoadForecast ;
-    sba:hasTimeResolution "24hrs";
+    sba:hasTimeResolution "10min";
+    sba:hasPredictionHorizon "12h" ;
 .

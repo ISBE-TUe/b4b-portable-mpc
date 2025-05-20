@@ -41,6 +41,6 @@ sba:PriceForecasAlgorithm
 rdfs:subClassOf sba:SmartBuildingAlgorithm ;
     sba:hasInput bldg1:price_service ;
     sba:hasPredictionOutput forc:ElectricityPriceForecast ;
-    sba:hasTimeResolution "24hrs";
-
+    sba:hasTimeResolution "10hrs";
+    sba:hasPredictionHorizon "12h" ;
 .
