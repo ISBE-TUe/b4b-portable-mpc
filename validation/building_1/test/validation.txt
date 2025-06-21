@@ -1,0 +1,347 @@
+shape_graph_brick_Building_Electrical_Meter.ttl
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L1_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L3_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L2_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_brick_Outside_Air_Temperature_Sensor.ttl
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L1_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L3_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L2_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_brick_Solar_Radiance_Sensor.ttl
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L1_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L3_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L2_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_brick_Wind_Speed_Sensor.ttl
+Validation Report
+Conforms: False
+Results (7):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L1_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L3_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#HistoricalTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasHistoricalTimeseriesId ]
+	Focus Node: <urn:building_kropman#bldgEVChargerCurrentMeter_1_L2_hisref>
+	Result Path: ref-ext:hasHistoricalTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_forc_OutdoorTemperatureForecast.ttl
+Validation Report
+Conforms: False
+Results (8):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_forc_SolarRadianceForecast.ttl
+Validation Report
+Conforms: False
+Results (8):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+
+shape_graph_forc_WindSpeedForecast.ttl
+Validation Report
+Conforms: False
+Results (8):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("All timeseries references need a value.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref-ext:hasForecastTimeseriesId ]
+	Focus Node: [ owl:sameAs <self> ; rdf:type <https://brickschema.org/schema/Brick/ref#ExternalReference>, <https://w3id.org/b4b/schemes/ext/ref-ext#ForecastTimeseriesReference>, owl:Thing, rdfs:Resource ]
+	Result Path: ref-ext:hasForecastTimeseriesId
+	Message: All timeseries references need a value.
+

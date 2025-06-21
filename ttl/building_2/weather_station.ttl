@@ -5,16 +5,16 @@ bldg2:bldgWeatherStation a brick:Weather_Station ;
         bldg2:bldgWindSpeedSensor ;
 .
 
-bldg2:bldgOutdoorTemperatureSensor  a brick:Outside_Air_Temperature_Sensor ;
-  brick:hasUnit unit:DEG_C ;
-  ref:hasExternalReference bldg2:bldgOutdoorTemperatureSensor_histref ;
-.
+# bldg2:bldgOutdoorTemperatureSensor  a brick:Outside_Air_Temperature_Sensor ;
+#   brick:hasUnit unit:DEG_C ;
+#   ref:hasExternalReference bldg2:bldgOutdoorTemperatureSensor_histref ;
+# .
 
-bldg2:bldgOutdoorTemperatureSensor_histref a ref-ext:HistoricalTimeseriesReference ;
-rdfs:label "OutdoorTemperature" ;
-    ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
-    ref:storedAt  bldg2:insitereports ;
-.
+# bldg2:bldgOutdoorTemperatureSensor_histref a ref-ext:HistoricalTimeseriesReference ;
+# rdfs:label "OutdoorTemperature" ;
+#     ref-ext:hasHistoricalTimeseriesId "a683b494a806af9a8da4d35ae99ba763" ;
+#     ref:storedAt  bldg2:insitereports ;
+# .
 
 
 bldg2:bldgSolarRadianceSensor a brick:Solar_Radiance_Sensor

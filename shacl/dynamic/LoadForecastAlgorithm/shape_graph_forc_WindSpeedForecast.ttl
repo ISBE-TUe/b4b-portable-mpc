@@ -1,0 +1,47 @@
+
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix : <urn:algorithm_shapes#> .
+
+:requiredClass_527d1594-d2d1-4e2f-92bd-13e2412c9d2a
+    a sh:NodeShape ;
+    sh:targetNode :targetNode ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The building must contain at least one instance of the data point." ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a forc:WindSpeedForecast  .
+                }
+            }
+        """ ;
+    ] .
+:requiedRelationship_9df0667b-0f79-4aa7-af1f-42f17132ec61
+    a sh:NodeShape ;
+    sh:targetClass forc:WindSpeedForecast ;
+    sh:property [
+        sh:path ref:hasExternalReference;
+        sh:minCount 1 ;
+        sh:message "All datapoints need a timeseries reference." ;
+    ] .
+:reqioredExrefValue_1d94a59c-82ed-49f9-8d10-d1412ffb2f4b
+    a sh:NodeShape ;
+    sh:targetClass ref-ext:ForecastTimeseriesReference ; 
+    sh:property [
+        sh:path ref-ext:hasForecastTimeseriesId;
+        sh:datatype xsd:string ;    
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "All timeseries references need a value." ;
+    ] .
+

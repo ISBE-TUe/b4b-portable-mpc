@@ -37,7 +37,7 @@
 @prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
 
 
-sba:EVRealtimeFeedbackAlgorithm
+mpc:EVRealtimeFeedbackAlgorithm
   rdfs:subClassOf sba:SmartBuildingAlgorithm;
   rdfs:label "RealtimeFeedback" ;
     sba:hasInputData
@@ -45,11 +45,28 @@ sba:EVRealtimeFeedbackAlgorithm
         brick-ev:EV_Arrival_Time,
         brick-ev:EV_Departure_Time,
         brick-ev:EV_Arrival_SOC,
-        brick-ev:EV_Battery_Size,
-        brick-ev:Vehicle_Full_Status,
-        brick-ev:Charging_Session_Status,
-        brick-ev:EV_Electric_Energy_Meter,
-        brick-ev:EV_Charging_Session_Visual_Number ;
-    sba:hasOutput sba:EVRealtimeFeedback ;
+        brick-ev:EV_Battery_Size        ;
+    sba:hasOutput
+        brick-ev:EV_Charging_Station_ID,
+        brick-ev:EV_Arrival_Time,
+        brick-ev:EV_Departure_Time,
+        brick-ev:EV_Arrival_SOC,
+        brick-ev:EV_Battery_Size        ;
   sba:hasTimeResolution "10min";
 .
+# mpc:EVRealtimeFeedbackAlgorithm
+#   rdfs:subClassOf sba:SmartBuildingAlgorithm;
+#   rdfs:label "RealtimeFeedback" ;
+#     sba:hasInputData
+#         brick-ev:EV_Charging_Station_ID,
+#         brick-ev:EV_Arrival_Time,
+#         brick-ev:EV_Departure_Time,
+#         brick-ev:EV_Arrival_SOC,
+#         brick-ev:EV_Battery_Size,
+#         brick-ev:Vehicle_Full_Status,
+#         brick-ev:Charging_Session_Status,
+#         brick-ev:EV_Electric_Energy_Meter,
+#         brick-ev:EV_Charging_Session_Visual_Number ;
+#     sba:hasOutput sba:EVRealtimeFeedback ;
+#   sba:hasTimeResolution "10min";
+# .

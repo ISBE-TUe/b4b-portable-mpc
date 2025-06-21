@@ -1,24 +1,24 @@
 bldg2:appdata a ref:Database ;
   rdfs:label  "MPC App database" ;
-  bldg2:connstring "https://bimsim.app/mpc" ;
+  ref-ext:connstring "https://bimsim.app/mpc" ;
 .
 
 bldg2:insiteview a ref:Database ;
   rdfs:label  "InsiteView Historical Timeseries Storage" ;
-  bldg2:connstring "https://ivs.kropman.nl/insiteview/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/insiteview/" ;
 .
 
 bldg2:insitereports a ref:Database ;
   rdfs:label  "InsiteView Historical Timeseries Storage" ;
-  bldg2:connstring "https://ivs.kropman.nl/insitereports/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/insitereports/" ;
 .
 
 bldg2:welkomkropman a ref:Database ;
   rdfs:label  "Welkom Kropman App data" ;
-  bldg2:connstring "https://ivs.kropman.nl/wk/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/wk/" ;
 .
 
 bldg2:easy_energy_api a ref:Database ;
   rdfs:label  "Easy Energy API" ;
-  bldg2:connstring "https://mijn.easyenergy.com/nl/api/tariff/getapxtariffs" ;
+  ref-ext:connstring "https://mijn.easyenergy.com/nl/api/tariff/getapxtariffs" ;
 .

@@ -1,0 +1,4 @@
+shape_graph_brick-ev_EV_Electric_Energy_Meter.ttl
+Validation Report
+Conforms: True
+

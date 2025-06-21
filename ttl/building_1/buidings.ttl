@@ -5,6 +5,20 @@ rdfs:label "Kropman Breda" ;
         bldg1:bldgPVGenerationSystem,
         bldg1:bldgWeatherStation ;
     brick:isMeteredBy bldg1:bldgPowermeter ;
+    brick-ext:hasBuildingPowerContract  bldg1:bldgPowerCapacity ;
+    brick-ext:hasPowerFactor bldg1:bldg_power_factor ;
+.
+
+bldg1:bldgPowerCapacity a brick-ext:BuildingPowerContract ;
+  rdfs:label "Building Power Capacity" ;
+  brick:value "61" ;
+  brick:hasUnit unit:KiloW ;
+.
+
+bldg1:bldg_power_factor a brick-ext:Power_Factor ;
+  rdfs:label "Building Power Factor" ;
+  brick:value "0.95" ;
+  brick:hasUnit unit:Unitless ;
 .
 
 bldg1:bldgPowermeter a brick:Building_Electrical_Meter ;

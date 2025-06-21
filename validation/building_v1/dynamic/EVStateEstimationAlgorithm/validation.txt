@@ -1,0 +1,171 @@
+shape_graph_brick-ev_Charging_Session_Status.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_f71511cb-3126-4187-8f98-c31d12a01f96
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:Charging_Session_Status  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Arrival_SOC.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_4a43310f-0409-488e-b773-2f5fb0a9f3fb
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Arrival_SOC  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Arrival_Time.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_709a5871-c1f1-4c34-89a1-ab3a17493361
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Arrival_Time  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Battery_Size.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_7b262822-b1e9-4400-bf95-7f9bbf5b7775
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Battery_Size  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Charging_Session_Visual_Number.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_f699a844-604a-4271-846c-0715b8cf08b1
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Charging_Session_Visual_Number  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Charging_Station_ID.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_cc287119-f08c-46d5-89e4-98854e56b388
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Charging_Station_ID  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Departure_Time.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_0fb29a91-6d13-4a08-bb42-8588b2a3c847
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Departure_Time  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_EV_Electric_Energy_Meter.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_d3e4aefb-4556-4299-bce0-ecef1a29650d
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:EV_Electric_Energy_Meter  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick-ev_Vehicle_Full_Status.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_bfaf3e04-f6ac-4833-b50c-7b3e6a31a2d0
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick-ev:Vehicle_Full_Status  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+

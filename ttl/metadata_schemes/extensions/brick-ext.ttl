@@ -1,0 +1,24 @@
+<https://w3id.org/b4b/schemes/ext/brick-ext#> a owl:Ontology ;
+owl:imports <https://brickschema.org/schema/Brick#>  ;
+.
+<https://w3id.org/b4b/schemes/ext/brick-ext#Brick_Extension>
+  rdfs:label "Brick Extension" ;
+  rdfs:comment "This extension adds additional classes and properties to the Brick schema." ;
+.
+
+
+brick-ext:Power_Factor a owl:Class ;
+  rdfs:range xsd:decimal ;
+.
+
+brick-ext:BuildingPowerContract a owl:Class ;
+  rdfs:domain brick:Building ;
+  rdfs:range xsd:string ;
+.
+
+
+brick-ext:hasBuildingPowerContract  a owl:ObjectProperty ;
+.
+
+brick-ext:hasPowerFactor a owl:ObjectProperty ;
+.

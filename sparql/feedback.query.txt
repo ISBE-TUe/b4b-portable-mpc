@@ -7,6 +7,6 @@ PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#>
 
 select * where { 
     ?s ?p ?o .
-    FILTER(?s=sba:RealtimeFeedbackAlgorithm)
+    FILTER(?s=mpc:EVRealtimeFeedbackAlgorithm)
     FILTER(?p=sba:hasInputData)
 }

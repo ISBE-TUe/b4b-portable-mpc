@@ -1,0 +1,33 @@
+PREFIX bldg1: <urn:building_kropman#>
+PREFIX brick-ext: <https://w3id.org/b4b/schemes/ext/brick-ext#>
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#>
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> 
+
+SELECT DISTINCT ?PowerRating ?Powerunits ?Vcharger ?Vunits ?BuildingContract ?BuildingContractUnits 
+WHERE { 
+   
+?s a brick:Electric_Vehicle_Charging_Port .
+?s brick-ev:hasChargerPowerRating ?Prating .
+?Prating a  brick-ev:Charger_Power_Rating .
+?Prating brick:value ?PowerRating .
+?Prating brick:hasUnit ?Powerunits .
+
+?s a brick:Electric_Vehicle_Charging_Port .
+?s brick-ev:hasChargerVoltageRating ?Vcharge.
+?Vcharge a brick-ev:Charger_Voltage_Rating .
+?Vcharge brick:value ?Vcharger .
+?Vcharge brick:hasUnit ?Vunits .
+
+?b a bot:Building .
+?b brick-ext:hasBuildingPowerContract ?o .
+?o a brick-ext:BuildingPowerContract .
+?o brick:value ?BuildingContract .
+?o brick:hasUnit ?BuildingContractUnits .
+
+}

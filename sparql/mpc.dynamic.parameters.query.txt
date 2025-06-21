@@ -1,0 +1,25 @@
+PREFIX ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#>
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> 
+
+SELECT DISTINCT ?EVPower ?EVEnergy
+
+WHERE {
+   
+?s a brick:Electric_Vehicle_Charging_Port .
+?s brick:hasPoint ?evEnerMeter.
+?evEnerMeter a  brick-ev:EV_Electric_Energy_Meter .
+?evEnerMeter ref:hasExternalReference ?evEngExt .
+?evEngExt ref-ext:hasHistoricalTimeseriesId ?EVEnergy .
+
+?s a brick:Electric_Vehicle_Charging_Port .
+?s brick:hasPoint ?evPowerMeter.
+?evPowerMeter a brick-ev:EV_Electric_Power_Sensor .
+?evPowerMeter ref:hasExternalReference ?evPExt .
+?evPExt ref-ext:hasHistoricalTimeseriesId ?EVPower .
+
+}

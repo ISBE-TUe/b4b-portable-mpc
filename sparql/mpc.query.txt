@@ -8,6 +8,6 @@ PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#>
 
 select * where { 
     ?s ?p ?o .
-    FILTER(?s=mpc:DSM-MPC)
+    FILTER(?s=mpc:Smart_Charging_MPC)
     FILTER(?p=sba:hasInput)
 }

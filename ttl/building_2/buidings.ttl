@@ -1,10 +1,24 @@
 bldg2:virtual_building a bot:Building ;
-rdfs:label "Virtual Test Building" ;
+rdfs:label "virtual_building" ;
     brick:isLocationOf 
         bldg2:ev-hub,
         bldg2:bldgPVGenerationSystem,
         bldg2:bldgWeatherStation ;
     brick:isMeteredBy bldg2:bldgPowermeter ;
+    brick-ext:hasBuildingPowerContract  bldg2:bldgPowerCapacity ;
+    brick-ext:hasPowerFactor bldg2:bldg_power_factor ;
+.
+
+bldg2:bldgPowerCapacity a brick-ext:BuildingPowerContract ;
+  rdfs:label "Building Power Capacity" ;
+  brick:value "61" ;
+  brick:hasUnit unit:KiloW ;
+.
+
+bldg2:bldg_power_factor a brick-ext:Power_Factor ;
+  rdfs:label "Building Power Factor" ;
+  brick:value "0.95" ;
+  brick:hasUnit unit:Unitless ;
 .
 
 bldg2:bldgPowermeter a brick:Building_Electrical_Meter ;

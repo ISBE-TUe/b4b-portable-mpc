@@ -1,0 +1,47 @@
+
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix : <urn:algorithm_shapes#> .
+
+:requiredClass_37388e76-7218-48ae-baf4-db0e58db5c30
+    a sh:NodeShape ;
+    sh:targetNode :targetNode ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The building must contain at least one instance of the data point." ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick:Building_Electrical_Meter  .
+                }
+            }
+        """ ;
+    ] .
+:requiedRelationship_7006826c-8da4-4e15-853f-7589539467b4
+    a sh:NodeShape ;
+    sh:targetClass brick:Building_Electrical_Meter ;
+    sh:property [
+        sh:path ref:hasExternalReference;
+        sh:minCount 1 ;
+        sh:message "All datapoints need a timeseries reference." ;
+    ] .
+:reqioredExrefValue_b57f78f8-3ab9-45af-8bd7-90fd512d9f24
+    a sh:NodeShape ;
+    sh:targetClass ref-ext:HistoricalTimeseriesReference ; 
+    sh:property [
+        sh:path ref-ext:hasHistoricalTimeseriesId;
+        sh:datatype xsd:string ;    
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "All timeseries references need a value." ;
+    ] .
+

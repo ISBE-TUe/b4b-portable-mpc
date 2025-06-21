@@ -1,3 +1,45 @@
+@prefix bldg1: <urn:building_kropman#> .
+@prefix bldg2: <urn:building_v1#> .
+
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix wot: <https://www.w3.org/2019/wot/td/v1#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openadr: <https://w3id.org/def/openadr#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pep: <https://w3id.org/pep#> .
+@prefix weather: <https://bimerr.iot.linkeddata.es/def/weather#> .
+@prefix bacnet: <http://data.ashrae.org/bacnet/2020#> .
+@prefix bsh: <https://brickschema.org/schema/BrickShape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtqk: <http://qudt.org/vocab/quantitykind/> .
+@prefix s223: <http://data.ashrae.org/standard223#> .
+@prefix sdo: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tag: <https://brickschema.org/schema/BrickTag#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@prefix pep-ext: <https://w3id.org/b4b/schemes/ext/pep-ext#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+
+
 bldg1:parking_lot a brick:Parking_Structure ;
     brick:isLocationOf bldg1:ev-hub 
 .
@@ -22,14 +64,14 @@ bldg1:station2 a brick:Electric_Vehicle_Charging_Station ;
 
 bldg1:port1 a brick:Electric_Vehicle_Charging_Port ;
     bldg1:identifier "1" ;
-    bldg1:physical_reference "1" ;
+     brick-ev:physical_reference "1" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
     brick:electricalPhaseCount [ brick:value 3 ] ;
     brick:hasPoint bldg1:bldgEVChargerPowerMeter_1 ;
     brick:hasPoint bldg1:bldgEVChargerEnergyMeter_1 ;
-    brick:hasPoint bldg1:bldgEVChargerCurrentMeter_1 ;
+    brick:hasPoint bldg1:bldgEVChargerCurrentMeter_1_L1 ;
     brick:hasPoint bldg1:charging_status_id1 ;
     brick:hasPoint bldg1:vehicle_full_status_id1 ;
     brick:hasPoint bldg1:visual_number_id1 ;
@@ -37,8 +79,32 @@ bldg1:port1 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg1:arrival_time_id1 ;
     brick:hasPoint bldg1:arrival_soc_id1 ;
     brick:hasPoint bldg1:departure_time_id1 ;
-    brick:hasPoint bldg1:charging_current_setpoint_id1 ;
     brick:hasPoint bldg1:charging_station_id1 ;
+    brick-ev:hasMaximumChargingCurrent bldg1:max_charging_current_setpoint_id1 ;
+    brick-ev:hasMinimumChargingCurrent bldg1:min_charging_current_setpoint_id1 ;
+    brick-ev:hasChargerVoltageRating bldg1:charger_voltage_rating_id1 ;
+    brick-ev:hasChargerPowerRating bldg1:charger_power_rating_id1 ;
+    brick-ev:hasChargerEfficiency bldg1:charger_efficiency_id1 ;
+.
+bldg1:max_charging_current_setpoint_id1 a brick-ev:Maximum_Charging_Current_Setpoint ;
+    brick:value "16" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:min_charging_current_setpoint_id1 a brick-ev:Minimum_Charging_Current_Setpoint ;
+    brick:value "6" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:charger_voltage_rating_id1 a brick-ev:Charger_Voltage_Rating ;
+    brick:value "230" ;
+    brick:hasUnit unit:Volt ;
+.
+bldg1:charger_power_rating_id1 a brick-ev:Charger_Power_Rating ;
+    brick:value "11" ;
+    brick:hasUnit unit:KiloW ;
+.
+bldg1:charger_efficiency_id1 a brick-ev:Charger_Efficiency ;
+    brick:value "0.95" ;
+    brick:hasUnit unit:Unitless ;
 .
 
 bldg1:charging_station_id1 a brick-ev:EV_Charging_Station_ID ;
@@ -49,19 +115,9 @@ bldg1:charging_station_id1_ref a ref-ext:RealtimeTimeseriesReference ;
   ref-ext:hasRealtimeTimeseriesId "1" ;
 .
 
-bldg1:charging_current_setpoint_id1 a brick-ev:EVChargingCurrentSetpoint ;
-    ref:hasExternalReference bldg1:bldgEVCharger_1_current_setpoint ;
-.
-
-bldg1:bldgEVCharger_1_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
-rdfs:label "ChargingCurrentSetpoint_Id1" ;
-  ref-ext:hasRealtimeTimeseriesId "id1.MaxAmpere" ;
-  ref:storedAt  bldg1:insiteview ;
-.
-
 bldg1:port2 a brick:Electric_Vehicle_Charging_Port ;
     bldg1:identifier "2" ;
-    bldg1:physical_reference "2" ;
+     brick-ev:physical_reference "2" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -76,9 +132,34 @@ bldg1:port2 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg1:arrival_time_id2 ;
     brick:hasPoint bldg1:arrival_soc_id2;
     brick:hasPoint bldg1:departure_time_id2 ;
-    brick:hasPoint bldg1:charging_current_setpoint_id2 ;
     brick:hasPoint bldg1:charging_station_id2 ;
+    brick-ev:hasMaximumChargingCurrent bldg1:max_charging_current_setpoint_id2 ;
+    brick-ev:hasMinimumChargingCurrent bldg1:min_charging_current_setpoint_id2 ;
+    brick-ev:hasChargerVoltageRating bldg1:charger_voltage_rating_id2 ;
+    brick-ev:hasChargerPowerRating bldg1:charger_power_rating_id2 ;
+    brick-ev:hasChargerEfficiency bldg1:charger_efficiency_id2 ;
 .
+bldg1:max_charging_current_setpoint_id2 a brick-ev:Maximum_Charging_Current_Setpoint ;
+    brick:value "16" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:min_charging_current_setpoint_id2 a brick-ev:Minimum_Charging_Current_Setpoint ;
+    brick:value "6" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:charger_voltage_rating_id2 a brick-ev:Charger_Voltage_Rating ;
+    brick:value "230" ;
+    brick:hasUnit unit:Volt ;
+.
+bldg1:charger_power_rating_id2 a brick-ev:Charger_Power_Rating ;
+    brick:value "11" ;
+    brick:hasUnit unit:KiloW ;
+.
+bldg1:charger_efficiency_id2 a brick-ev:Charger_Efficiency ;
+    brick:value "0.95" ;
+    brick:hasUnit unit:Unitless ;
+.
+
 
 bldg1:charging_station_id2 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg1:charging_station_id2_ref ;
@@ -87,20 +168,11 @@ bldg1:charging_station_id2 a brick-ev:EV_Charging_Station_ID ;
 bldg1:charging_station_id2_ref a ref-ext:RealtimeTimeseriesReference ;
   ref-ext:hasRealtimeTimeseriesId "2" ;
 .
-bldg1:charging_current_setpoint_id2 a brick-ev:EVChargingCurrentSetpoint ;
-    ref:hasExternalReference bldg1:bldgEVCharger_2_current_setpoint ;
-.
-
-bldg1:bldgEVCharger_2_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
-rdfs:label "ChargingCurrentSetpoint_Id2" ;
-  ref-ext:hasRealtimeTimeseriesId "id2.MaxAmpere" ;
-  ref:storedAt  bldg1:insiteview ;
-.
 
 
 bldg1:port3 a brick:Electric_Vehicle_Charging_Port ;
     bldg1:identifier "3" ;
-    bldg1:physical_reference "3" ;
+     brick-ev:physical_reference "3" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -115,9 +187,34 @@ bldg1:port3 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg1:arrival_time_id3 ;
     brick:hasPoint bldg1:arrival_soc_id3;
     brick:hasPoint bldg1:departure_time_id3 ;
-    brick:hasPoint bldg1:charging_current_setpoint_id3 ;
     brick:hasPoint bldg1:charging_station_id3 ;
+    brick-ev:hasMaximumChargingCurrent bldg1:max_charging_current_setpoint_id3 ;
+    brick-ev:hasMinimumChargingCurrent bldg1:min_charging_current_setpoint_id3 ;
+    brick-ev:hasChargerVoltageRating bldg1:charger_voltage_rating_id3 ;
+    brick-ev:hasChargerPowerRating bldg1:charger_power_rating_id3 ;
+    brick-ev:hasChargerEfficiency bldg1:charger_efficiency_id3 ;
 .
+bldg1:max_charging_current_setpoint_id3 a brick-ev:Maximum_Charging_Current_Setpoint ;
+    brick:value "16" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:min_charging_current_setpoint_id3 a brick-ev:Minimum_Charging_Current_Setpoint ;
+    brick:value "6" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:charger_voltage_rating_id3 a brick-ev:Charger_Voltage_Rating ;
+    brick:value "230" ;
+    brick:hasUnit unit:Volt ;
+.
+bldg1:charger_power_rating_id3 a brick-ev:Charger_Power_Rating ;
+    brick:value "11" ;
+    brick:hasUnit unit:KiloW ;
+.
+bldg1:charger_efficiency_id3 a brick-ev:Charger_Efficiency ;
+    brick:value "0.95" ;
+    brick:hasUnit unit:Unitless ;
+.
+
 
 bldg1:charging_station_id3 a brick-ev:EV_Charging_Station_ID ;
     ref:hasExternalReference bldg1:charging_station_id3_ref ;
@@ -127,20 +224,9 @@ bldg1:charging_station_id3_ref a ref-ext:RealtimeTimeseriesReference ;
   ref-ext:hasRealtimeTimeseriesId "3" ;
 .
 
-bldg1:charging_current_setpoint_id3 a brick-ev:EVChargingCurrentSetpoint ;
-    ref:hasExternalReference bldg1:bldgEVCharger_3_current_setpoint ;
-.
-
-bldg1:bldgEVCharger_3_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
-rdfs:label "ChargingCurrentSetpoint_Id3" ;
-  ref-ext:hasRealtimeTimeseriesId "id3.MaxAmpere" ;
-  ref:storedAt  bldg1:insiteview ;
-.
-
-
 bldg1:port4 a brick:Electric_Vehicle_Charging_Port ;
     bldg1:identifier "4" ;
-    bldg1:physical_reference "4" ;
+     brick-ev:physical_reference "4" ;
     brick:electricVehicleChargerDirectionality [ brick:value "bidirectional" ] ;
     brick:electricVehicleConnectorType [ brick:value "Level 2 (IEC_62196_T2)" ] ;
     brick:currentFlowType [ brick:value "AC" ] ;
@@ -155,8 +241,32 @@ bldg1:port4 a brick:Electric_Vehicle_Charging_Port ;
     brick:hasPoint bldg1:arrival_time_id4 ;
     brick:hasPoint bldg1:arrival_soc_id4 ;
     brick:hasPoint bldg1:departure_time_id4 ;
-    brick:hasPoint bldg1:charging_current_setpoint_id4 ;
     brick:hasPoint bldg1:charging_station_id4 ;
+    brick-ev:hasMaximumChargingCurrent bldg1:max_charging_current_setpoint_id4 ;
+    brick-ev:hasMinimumChargingCurrent bldg1:min_charging_current_setpoint_id4 ;
+    brick-ev:hasChargerVoltageRating bldg1:charger_voltage_rating_id4 ;
+    brick-ev:hasChargerPowerRating bldg1:charger_power_rating_id4 ;
+    brick-ev:hasChargerEfficiency bldg1:charger_efficiency_id4 ;
+.
+bldg1:max_charging_current_setpoint_id4 a brick-ev:Maximum_Charging_Current_Setpoint ;
+    brick:value "16" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:min_charging_current_setpoint_id4 a brick-ev:Minimum_Charging_Current_Setpoint ;
+    brick:value "6" ;
+    brick:hasUnit unit:A ;
+.
+bldg1:charger_voltage_rating_id4 a brick-ev:Charger_Voltage_Rating ;
+    brick:value "230" ;
+    brick:hasUnit unit:Volt ;
+.
+bldg1:charger_power_rating_id4 a brick-ev:Charger_Power_Rating ;
+    brick:value "11" ;
+    brick:hasUnit unit:KiloW ;
+.
+bldg1:charger_efficiency_id4 a brick-ev:Charger_Efficiency ;
+    brick:value "0.95" ;
+    brick:hasUnit unit:Unitless ;
 .
 
 bldg1:charging_station_id4 a brick-ev:EV_Charging_Station_ID ;
@@ -167,24 +277,14 @@ bldg1:charging_station_id4_ref a ref-ext:RealtimeTimeseriesReference ;
   ref-ext:hasRealtimeTimeseriesId "4" ;
 .
 
-bldg1:charging_current_setpoint_id4 a brick-ev:EVChargingCurrentSetpoint ;
-    ref:hasExternalReference bldg1:bldgEVCharger_4_current_setpoint ;
-.
-
-bldg1:bldgEVCharger_4_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
-rdfs:label "ChargingCurrentSetpoint_Id4" ;
-  ref-ext:hasRealtimeTimeseriesId "id4.MaxAmpere" ;
-  ref:storedAt  bldg1:insiteview ;
-.
-
 bldg1:bldgEVChargerPowerMeter_1  a brick-ev:EV_Electric_Power_Sensor ;
   brick:hasUnit unit:KiloW ;
   ref:hasExternalReference bldg1:bldgEVChargerPowerMeter_1_histref ;
 .
 
-bldg1:bldgEVChargerPowerMeter_1_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerPowerMeter_1_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_1" ;
-  ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.AVERAGE_POWER$value" ;
+  ref-ext:hasHistoricalTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.AVERAGE_POWER$value" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -193,9 +293,9 @@ bldg1:bldgEVChargerEnergyMeter_1  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg1:bldgEVChargerEnergyMeter_1_histref ;
 .
 
-bldg1:bldgEVChargerEnergyMeter_1_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerEnergyMeter_1_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "energy_id1" ;
-  ref-ext:hasRealtimeTimeseriesId  "759ca9cc4f3bf8f552084d67f25d45899" ;
+  ref-ext:hasHistoricalTimeseriesId  "759ca9cc4f3bf8f552084d67f25d45899" ;
   ref:storedAt  bldg1:insiteview ;
 . 
 
@@ -204,9 +304,9 @@ bldg1:bldgEVChargerPowerMeter_2  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg1:bldgEVChargerPowerMeter_2_histref ;
 .
 
-bldg1:bldgEVChargerPowerMeter_2_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerPowerMeter_2_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_2" ;
-  ref-ext:hasRealtimeTimeseriesId "cd8afb76be06cc43e288041260df100eb.AVERAGE_POWER$value" ;
+  ref-ext:hasHistoricalTimeseriesId "cd8afb76be06cc43e288041260df100eb.AVERAGE_POWER$value" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -215,9 +315,9 @@ bldg1:bldgEVChargerEnergyMeter_2  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg1:bldgEVChargerEnergyMeter_2_histref ;
 .
 
-bldg1:bldgEVChargerEnergyMeter_2_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerEnergyMeter_2_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "energy_id2" ;
-  ref-ext:hasRealtimeTimeseriesId  "1cb94c6d3ecd7c90b08317ad11121a31c" ;
+  ref-ext:hasHistoricalTimeseriesId  "1cb94c6d3ecd7c90b08317ad11121a31c" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -226,9 +326,9 @@ bldg1:bldgEVChargerPowerMeter_3  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg1:bldgEVChargerPowerMeter_3_histref ;
 .
 
-bldg1:bldgEVChargerPowerMeter_3_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerPowerMeter_3_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_3" ;
-  ref-ext:hasRealtimeTimeseriesId "9fd044a2806b252458d24a054ecf0f145.AVERAGE_POWER$value" ;
+  ref-ext:hasHistoricalTimeseriesId "9fd044a2806b252458d24a054ecf0f145.AVERAGE_POWER$value" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -237,9 +337,9 @@ bldg1:bldgEVChargerEnergyMeter_3  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg1:bldgEVChargerEnergyMeter_3_histref ;
 .
 
-bldg1:bldgEVChargerEnergyMeter_3_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerEnergyMeter_3_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "energy_id3" ;
-  ref-ext:hasRealtimeTimeseriesId  "f10dc57115f3546ff2ccb745362c73c96" ;
+  ref-ext:hasHistoricalTimeseriesId  "f10dc57115f3546ff2ccb745362c73c96" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -248,9 +348,9 @@ bldg1:bldgEVChargerPowerMeter_4  a brick-ev:EV_Electric_Power_Sensor ;
   ref:hasExternalReference bldg1:bldgEVChargerPowerMeter_4_histref ;
 .
 
-bldg1:bldgEVChargerPowerMeter_4_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerPowerMeter_4_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "EVChargerPowerMeter_4" ;
-  ref-ext:hasRealtimeTimeseriesId "737bf181efc276eec62f75bc34a171dd2.AVERAGE_POWER$value" ;
+  ref-ext:hasHistoricalTimeseriesId "737bf181efc276eec62f75bc34a171dd2.AVERAGE_POWER$value" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -259,20 +359,58 @@ bldg1:bldgEVChargerEnergyMeter_4  a brick-ev:EV_Electric_Energy_Meter ;
   ref:hasExternalReference bldg1:bldgEVChargerEnergyMeter_4_histref ;
 .
 
-bldg1:bldgEVChargerEnergyMeter_4_histref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerEnergyMeter_4_histref a ref-ext:HistoricalTimeseriesReference ;
 rdfs:label "energy_id4" ;
-  ref-ext:hasRealtimeTimeseriesId  "83a9cd04a4852e57bc3918762d1a049f3" ;
+  ref-ext:hasHistoricalTimeseriesId  "83a9cd04a4852e57bc3918762d1a049f3" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
-bldg1:bldgEVChargerCurrentMeter_1 a brick-ev:EV_Load_Current_Sensor ;
+bldg1:bldgEVChargerCurrentMeter_1_L1 a brick-ev:EV_Load_Current_Sensor ;
   brick:hasUnit unit:A ;
-  ref:hasExternalReference bldg1:bldgEVChargerCurrentMeter_1_rtref ;
+  ref:hasExternalReference bldg1:bldgEVChargerCurrentMeter_1_L1_rtref,
+  bldg1:bldgEVChargerCurrentMeter_1_L1_hisref  ;
 .
 
-bldg1:bldgEVChargerCurrentMeter_1_rtref a ref-ext:RealtimeTimeseriesReference ;
+bldg1:bldgEVChargerCurrentMeter_1_L1_rtref a ref-ext:RealtimeTimeseriesReference ;
 rdfs:label "EVChargerCurrentMeter_1" ;
   ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.CURRENT_L1$value" ;
+  ref:storedAt  bldg1:insiteview ;
+.
+bldg1:bldgEVChargerCurrentMeter_1_L1_hisref a ref-ext:HistoricalTimeseriesReference ;
+rdfs:label "EVChargerCurrentMeter_1" ;
+  ref-ext:hasHistoricalTimeseriesId "56b56a995eae7ac5e331e115b3ad9a70.CURRENT_L1$value" ;
+  ref:storedAt  bldg1:insiteview ;
+.
+bldg1:bldgEVChargerCurrentMeter_1_L2 a brick-ev:EV_Load_Current_Sensor ;
+  brick:hasUnit unit:A ;
+  ref:hasExternalReference bldg1:bldgEVChargerCurrentMeter_1_L2_rtref,
+  bldg1:bldgEVChargerCurrentMeter_1_L2_hisref  ;
+.
+bldg1:bldgEVChargerCurrentMeter_1_L3 a brick-ev:EV_Load_Current_Sensor ;
+  brick:hasUnit unit:A ;
+  ref:hasExternalReference bldg1:bldgEVChargerCurrentMeter_1_L3_rtref,
+  bldg1:bldgEVChargerCurrentMeter_1_L3_hisref  ;
+.
+
+bldg1:bldgEVChargerCurrentMeter_1_L2_rtref a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "EVChargerCurrentMeter_1" ;
+  ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.CURRENT_L2$value" ;
+  ref:storedAt  bldg1:insiteview ;
+.
+bldg1:bldgEVChargerCurrentMeter_1_L2_hisref a ref-ext:HistoricalTimeseriesReference ;
+rdfs:label "EVChargerCurrentMeter_1" ;
+  ref-ext:hasHistoricalTimeseriesId "56b56a995eae7ac5e331e115b3ad9a70.CURRENT_L2$value" ;
+  ref:storedAt  bldg1:insiteview ;
+.
+
+bldg1:bldgEVChargerCurrentMeter_1_L3_rtref a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "EVChargerCurrentMeter_1" ;
+  ref-ext:hasRealtimeTimeseriesId "56b56a995eae7ac5e331e115b3ad9a708.CURRENT_L3$value" ;
+  ref:storedAt  bldg1:insiteview ;
+.
+bldg1:bldgEVChargerCurrentMeter_1_L3_hisref a ref-ext:HistoricalTimeseriesReference ;
+rdfs:label "EVChargerCurrentMeter_1" ;
+  ref-ext:hasHistoricalTimeseriesId "56b56a995eae7ac5e331e115b3ad9a70.CURRENT_L3$value" ;
   ref:storedAt  bldg1:insiteview ;
 .
 
@@ -493,5 +631,5 @@ bldg1:departure_time_id4 a brick-ev:EV_Departure_Time ;
 bldg1:welkom_kropman_records a ref-ext:RealtimeTimeseriesReference ;
     rdfs:label "welkom_kropman_records" ;
     ref-ext:hasRealtimeTimeseriesId "evse/welkomkropman" ;
-    ref:storedAt  bldg1:insiteview ;
+    ref:storedAt  bldg1:welkomkropman ;
 .

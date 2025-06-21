@@ -37,17 +37,13 @@ where {
 ?vFull  ref:hasExternalReference ?vFullExt .
 ?vFullExt ref-ext:hasRealtimeTimeseriesId ?vFullId .
 
-?vFull a brick-ev:Vehicle_Full_Status .
-?vFull  ref:hasExternalReference ?vFullExt .
-?vFullExt ref-ext:hasRealtimeTimeseriesId ?vFullId .
-
 ?chrgStatus a brick-ev:Charging_Session_Status .
 ?chrgStatus  ref:hasExternalReference ?chrgStatusExt .
 ?chrgStatusExt ref-ext:hasRealtimeTimeseriesId ?chrgStatusId .
         
 ?energy a brick-ev:EV_Electric_Energy_Meter .
 ?energy  ref:hasExternalReference ?energyExt .
-?energyExt ref-ext:hasRealtimeTimeseriesId ?energyId .
+?energyExt ref-ext:hasHistoricalTimeseriesId ?energyId .
 
 ?visualNum a brick-ev:EV_Charging_Session_Visual_Number .
 ?visualNum  ref:hasExternalReference ?visualNumExt .

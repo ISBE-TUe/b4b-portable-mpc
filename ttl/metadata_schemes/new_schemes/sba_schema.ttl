@@ -18,7 +18,7 @@ sba:LoadForecastAlgorithm
   rdfs:comment "The algorithm forecasts the building electricity load withing the given starting time (6.00 a.m) and end time (6.00 p.m)." ;
 .
 
-sba:EVRealtimeFeedbackAlgorithm
+mpc:EVRealtimeFeedbackAlgorithm
   rdfs:subClassOf sba:RealtimeFeedbackAlgorithm;
   rdfs:label "EVRealtimeFeedbackAlgorithm" ;
 .
@@ -120,6 +120,7 @@ sba:hasTimeResolution a owl:DatatypeProperty ;
     rdfs:domain sba:SmartBuildingAlgorithm ;
     rdfs:range xsd:string ;
 .
+
 sba:hasPredictionHorizon a owl:DatatypeProperty ;
     rdfs:domain sba:SmartBuildingAlgorithm ;
     rdfs:range xsd:string ;

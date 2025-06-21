@@ -11,7 +11,7 @@
 @prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
 @prefix : <urn:algorithm_shapes#> .
 
-:AlgorithmInputShape_0bc2f1d3-a30b-4d42-9138-a5adfdea720c 
+:AlgorithmInputShape_d6cdd0b4-d30a-4fee-875d-01be143f6536 
     a sh:NodeShape ;
     sh:targetClass forc:BuildingLoadForecast ;
     sh:property :property_1;

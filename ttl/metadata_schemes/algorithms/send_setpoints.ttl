@@ -38,5 +38,9 @@
 
 
 mpc:EVChargingCurrentSetpointCommunication 
-    sba:hasInput brick-ev:EVChargingCurrentSetpoint;
+  rdfs:subClassOf sba:SmartBuildingAlgorithm ;
+    sba:hasInput 
+    # brick-ev:MinimumEVChargingCurrentSetpoint ,
+    # brick-ev:MaximumEVChargingCurrentSetpoint ,
+    brick-ev:EVChargingCurrentSetpoint ;
 .

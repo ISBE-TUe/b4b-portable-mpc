@@ -1,24 +1,24 @@
-bldg1:appdata a ref:Database ;
+bldg1:mpc_api a ref-ext:API_Application ;
   rdfs:label  "MPC App database" ;
-  bldg1:connstring "https://bimsim.app/mpc" ;
+  ref-ext:connstring "https://bimsim.app/mpc" ;
 .
 
-bldg1:insiteview a ref:Database ;
+bldg1:insiteview a ref-ext:API_Application ;
   rdfs:label  "InsiteView Historical Timeseries Storage" ;
-  bldg1:connstring "https://ivs.kropman.nl/insiteview/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/insiteview/breda/rpc/b4b/getaddressvalue" ;
 .
 
-bldg1:insitereports a ref:Database ;
+bldg1:insitereports a ref-ext:API_Application ;
   rdfs:label  "InsiteView Historical Timeseries Storage" ;
-  bldg1:connstring "https://ivs.kropman.nl/insitereports/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/insitereports/" ;
 .
 
-bldg1:welkomkropman a ref:Database ;
+bldg1:welkomkropman a ref-ext:API_Application ;
   rdfs:label  "Welkom Kropman App data" ;
-  bldg1:connstring "https://ivs.kropman.nl/wk/" ;
+  ref-ext:connstring "https://ivs.kropman.nl/insitview/breda/rpc/evse/welkomkropman" ; 
 .
 
-bldg1:easy_energy_api a ref:Database ;
+bldg1:easy_energy_api a ref-ext:API_Application ;
   rdfs:label  "Easy Energy API" ;
-  bldg1:connstring "https://mijn.easyenergy.com/nl/api/tariff/getapxtariffs" ;
+  ref-ext:connstring "https://mijn.easyenergy.com/nl/api/tariff/getapxtariffs" ;
 .

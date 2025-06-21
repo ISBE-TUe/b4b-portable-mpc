@@ -39,7 +39,7 @@
 
 sba:PVForecasAlgorithm  
 rdfs:subClassOf sba:SmartBuildingAlgorithm ;
-    sba:hasInput bldg1:pv_service  ;
+    sba:hasInput sba:ExternalPVForecastServiceProvider  ;
     sba:hasPredictionOutput forc:PVForecast ;
     sba:hasTimeResolution "10min";
     sba:hasPredictionHorizon "12h" ;

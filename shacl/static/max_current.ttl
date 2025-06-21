@@ -1,0 +1,96 @@
+
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix wot: <https://www.w3.org/2019/wot/td/v1#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openadr: <https://w3id.org/def/openadr#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pep: <https://w3id.org/pep#> .
+@prefix weather: <https://bimerr.iot.linkeddata.es/def/weather#> .
+@prefix bacnet: <http://data.ashrae.org/bacnet/2020#> .
+@prefix bsh: <https://brickschema.org/schema/BrickShape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtqk: <http://qudt.org/vocab/quantitykind/> .
+@prefix s223: <http://data.ashrae.org/standard223#> .
+@prefix sdo: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tag: <https://brickschema.org/schema/BrickTag#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@prefix pep-ext: <https://w3id.org/b4b/schemes/ext/pep-ext#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix brick-ext: <https://w3id.org/b4b/schemes/ext/brick-ext#> .
+
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+
+@prefix bldg2: <urn:building_kropman#> .
+@prefix bldg2: <urn:building_v1#> .
+@prefix : <urn:algorithm_shapes#> .
+
+
+# :AtLeastOneSensorShape
+#     a sh:NodeShape ;
+#     sh:targetClass brick:Electric_Vehicle_Charging_Port ;
+#     sh:property [
+#         sh:path rdf:type ;
+#         sh:minCount 1 ;
+#     ] .
+
+# :hasMaximumChargingCurrentShape a sh:NodeShape ;
+#     sh:targetClass brick:Electric_Vehicle_Charging_Port ;
+#     sh:property [
+#         sh:path brick-ev:hasMaximumChargingCurrent ;
+#         sh:node brick:MaximumChargingCurrentSetpointShape ;
+#         sh:minCount 1 ;
+#     ] .
+
+
+:hasMaximumChargingCurrentShape
+    a sh:NodeShape ;
+    sh:targetClass brick:Electric_Vehicle_Charging_Port ;
+    sh:property [
+        sh:path brick-ev:hasMaximumChargingCurrent ;
+        sh:minCount 1 ;
+        sh:message "Every brick:Electric_Vehicle_Charging_Port must have at least one brick-ev:hasMaximumChargingCurrent." ;
+    ] .
+
+:RequireAtLeastOneEVPort
+    a sh:NodeShape ;
+    sh:targetNode :targetNode ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The building must contain at least one instance of brick:Electric_Vehicle_Charging_Port." ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick:Electric_Vehicle_Charging_Port .
+                }
+            }
+        """ ;
+    ] .
+
+:SetpointValueShape
+    a sh:NodeShape ;
+    sh:targetClass brick-ev:Maximum_Charging_Current_Setpoint ; 
+    sh:property [
+        sh:path brick:value ;
+        sh:datatype xsd:string ;    
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each Setpoint must have exactly one brick:value of type xsd:string." ;
+    ] .

@@ -11,7 +11,7 @@
 @prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
 @prefix : <urn:algorithm_shapes#> .
 
-:AlgorithmInputShape_8496e0e7-dc4b-4b4e-91d7-fd1ce056ef09 
+:AlgorithmInputShape_e36bed49-0d0e-455c-a04d-a5667f64ebe9 
     a sh:NodeShape ;
     sh:targetClass forc:ElectricityPriceForecast ;
     sh:property :property_1;

@@ -1,0 +1,20 @@
+shape_graph_brick-ev_EV_Arrival_SOC.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick-ev_EV_Arrival_Time.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick-ev_EV_Battery_Size.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick-ev_EV_Charging_Station_ID.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick-ev_EV_Departure_Time.ttl
+Validation Report
+Conforms: True
+

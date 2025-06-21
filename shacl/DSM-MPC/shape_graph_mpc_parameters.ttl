@@ -1,0 +1,51 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
+@prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
+@prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .
+@prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
+@prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix brick-ext: <https://w3id.org/b4b/schemes/ext/brick-ext#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix : <urn:algorithm_shapes#> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix brick-ev: <https://brickschema.org/schema/Brick/extension/ev#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+
+@prefix ex: <http://example.org/shapes#> .
+
+ex:charge-station-params a sh:NodeShape ;
+    sh:targetClass brick:Electric_Vehicle_Charging_Port ;
+    sh:property [
+        sh:path brick-ev:hasMaximumChargingCurrent ;
+        # sh:class brick-ev:Maximum_Charging_Current_Setpoint  ;
+        # sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path brick-ev:hasMinimumChargingCurrent ;
+        # sh:class brick-ev:Minimum_Charging_Current_Setpoint  ;
+        # sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path brick-ev:hasChargerVoltageRating ;
+        # sh:class brick-ev:Charger_Voltage_Rating ;
+        # sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path brick-ev:hasChargerPowerRating ;
+        # sh:class brick-ev:Charger_Power_Rating ;
+        # sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path brick-ev:hasChargerEfficiency ;
+        # sh:class brick-ev:Charger_Efficiency ;
+        # sh:minCount 1 ;
+    ] ;
+.

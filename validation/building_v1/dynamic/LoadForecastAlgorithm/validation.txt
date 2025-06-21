@@ -1,0 +1,50 @@
+shape_graph_brick_Building_Electrical_Meter.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick_Outside_Air_Temperature_Sensor.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: :requiredClass_f6d49ea0-639c-4d2c-8724-05dfba5e7e1c
+	Focus Node: <urn:algorithm_shapes#targetNode>
+	Value Node: <urn:algorithm_shapes#targetNode>
+	Source Constraint: [ rdf:type sh:SPARQLConstraint ; sh:message Literal("The building must contain at least one instance of the data point.") ; sh:select Literal("
+            SELECT ?this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?sensor a brick:Outside_Air_Temperature_Sensor  .
+                }
+            }
+        ") ]
+	Message: The building must contain at least one instance of the data point.
+
+shape_graph_brick_Solar_Radiance_Sensor.ttl
+Validation Report
+Conforms: True
+
+shape_graph_brick_Wind_Speed_Sensor.ttl
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:message Literal("All datapoints need a timeseries reference.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ref:hasExternalReference ]
+	Focus Node: <urn:building_v1#bldgWindSpeedSensor>
+	Result Path: ref:hasExternalReference
+	Message: All datapoints need a timeseries reference.
+
+shape_graph_forc_OutdoorTemperatureForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_SolarRadianceForecast.ttl
+Validation Report
+Conforms: True
+
+shape_graph_forc_WindSpeedForecast.ttl
+Validation Report
+Conforms: True
+

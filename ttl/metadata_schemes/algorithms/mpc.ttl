@@ -37,26 +37,37 @@
 @prefix forc: <https://w3id.org/b4b/schemes/algorithms/forc#> .
 
 
-mpc:DSM-MPC
+mpc:Smart_Charging_MPC
   rdfs:subClassOf sba:SmartBuildingAlgorithm;
-  rdfs:label "DSM-MPC" ;
+  rdfs:label "Smart_Charging_MPC" ;
     mpc:hasInputDisturbanceForecast 
         forc:PVForecast ,
         forc:BuildingLoadForecast , 
         forc:ElectricityPriceForecast ;
     mpc:hasInputRealtimeFeedback
-        sba:EVRealtimeFeedback ;
+        brick-ev:EV_Charging_Station_ID,
+        brick-ev:Input,
+        brick-ev:EV_Departure_Time,
+        brick-ev:EV_Arrival_SOC,
+        brick-ev:EV_Battery_Size ;
     mpc:hasInputConstraint 
-        sba:BuildingPowerContract,
         brick-ev:Minimum_Charging_Current_Setpoint, 
-        brick-ev:Maximum_Charging_Current_Setpoint ,
-        brick-ev:EV_Charger_Voltage_Rating,
-        brick-ev:EV_Charger_Power_Rating,
-        brick-ev:EV_Charger_Efficiency;
+        brick-ev:Maximum_Charging_Current_Setpoint ;
+    mpc:hasInputParameter  
+        sba:BuildingPowerContract,
+        brick-ev:Charger_Voltage_Rating,
+        brick-ev:Charger_Power_Rating,
+        brick-ev:Charging_Efficiency,
+        brick-ext:Power_Factor ;
+    mpc:hasInputState
+        mpc:Vehicle_Full_Status,
+        mpc:Charging_Session_Status,
+        mpc:EV_Electric_Energy_Meter,
+        mpc:EV_Charging_Session_Visual_Number ;
     mpc:hasSystemBehaviourPrediction 
         mpc:EVChargingPrediction, mpc:GridPowerIntakePrediction ;
     mpc:hasOptimumResults 
-        brick-ev:EVChargingCurrentSetpoint ;
-    sba:hasTimeResolution "10min";
-    sba:hasPredictionHorizon "Receeding Horizon 12H to 10min" ;
+        brick-ev:EVChargingCurrentSetpoint  ;
+    mpc:hasTimeResolution "10min";
+    mpc:hasPredictionHorizon "Receeding Horizon 12H to 10min" ;
 .

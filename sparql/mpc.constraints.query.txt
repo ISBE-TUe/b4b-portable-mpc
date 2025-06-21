@@ -1,0 +1,19 @@
+PREFIX ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#>
+PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+PREFIX brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#>
+PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
+PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 
+PREFIX forc: <https://w3id.org/b4b/schemes/algorithms/forc#> 
+
+SELECT DISTINCT ?Imin ?Imax
+WHERE { 
+    
+?s a brick:Electric_Vehicle_Charging_Port .
+?s  brick-ev:hasMinimumChargingCurrent ?Iminref.
+?Iminref brick:value ?Imin .
+
+?s a brick:Electric_Vehicle_Charging_Port .
+?s  brick-ev:hasMaximumChargingCurrent ?Imaxref.
+?Imaxref brick:value ?Imax .
+}

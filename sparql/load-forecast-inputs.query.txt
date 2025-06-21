@@ -1,4 +1,5 @@
 PREFIX ref: <https://brickschema.org/schema/Brick/ref#>
+PREFIX ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#>
 PREFIX brick: <https://brickschema.org/schema/Brick#>
 PREFIX sba: <https://w3id.org/b4b/schemes/algorithms/sba#> 
 PREFIX mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> 

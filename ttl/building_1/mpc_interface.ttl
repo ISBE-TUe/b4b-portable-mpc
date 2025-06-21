@@ -1,0 +1,50 @@
+bldg1:port1 a brick:Electric_Vehicle_Charging_Port ;
+brick:hasPoint bldg1:charging_current_setpoint_id1
+.
+bldg1:charging_current_setpoint_id1 a brick-ev:EVChargingCurrentSetpoint ;
+    ref:hasExternalReference bldg1:bldgEVCharger_1_current_setpoint ;
+.
+bldg1:bldgEVCharger_1_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "ChargingCurrentSetpoint_Id1" ;
+  ref-ext:hasRealtimeTimeseriesId "id1.MaxAmpere" ;
+  ref:storedAt  bldg1:mpc_api ;
+.
+
+bldg1:port2 a brick:Electric_Vehicle_Charging_Port ;
+brick:hasPoint bldg1:charging_current_setpoint_id2 .
+
+bldg1:charging_current_setpoint_id2 a brick-ev:EVChargingCurrentSetpoint ;
+    ref:hasExternalReference bldg1:bldgEVCharger_2_current_setpoint ;
+.
+
+bldg1:bldgEVCharger_2_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "ChargingCurrentSetpoint_Id2" ;
+  ref-ext:hasRealtimeTimeseriesId "id2.MaxAmpere" ;
+  ref:storedAt  bldg1:mpc_api ;
+.
+bldg1:port3 a brick:Electric_Vehicle_Charging_Port ;
+brick:hasPoint bldg1:charging_current_setpoint_id3 .
+
+
+bldg1:charging_current_setpoint_id3 a brick-ev:EVChargingCurrentSetpoint ;
+    ref:hasExternalReference bldg1:bldgEVCharger_3_current_setpoint ;
+.
+
+bldg1:bldgEVCharger_3_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "ChargingCurrentSetpoint_Id3" ;
+  ref-ext:hasRealtimeTimeseriesId "id3.MaxAmpere" ;
+  ref:storedAt  bldg1:mpc_api ;
+.
+
+bldg1:port4 a brick:Electric_Vehicle_Charging_Port ;
+brick:hasPoint bldg1:charging_current_setpoint_id4 .
+
+bldg1:charging_current_setpoint_id4 a brick-ev:EVChargingCurrentSetpoint ;
+    ref:hasExternalReference bldg1:bldgEVCharger_4_current_setpoint ;
+.
+
+bldg1:bldgEVCharger_4_current_setpoint a ref-ext:RealtimeTimeseriesReference ;
+rdfs:label "ChargingCurrentSetpoint_Id4" ;
+  ref-ext:hasRealtimeTimeseriesId "id4.MaxAmpere" ;
+  ref:storedAt  bldg1:mpc_api ;
+.

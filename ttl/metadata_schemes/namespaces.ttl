@@ -31,6 +31,8 @@
 @prefix pep-ext: <https://w3id.org/b4b/schemes/ext/pep-ext#> .
 @prefix ref-ext: <https://w3id.org/b4b/schemes/ext/ref-ext#> .
 @prefix brick-ev: <https://w3id.org/b4b/schemes/ext/brick-ev#> .
+@prefix brick-ext: <https://w3id.org/b4b/schemes/ext/brick-ext#> .
+
 
 @prefix sba: <https://w3id.org/b4b/schemes/algorithms/sba#> .
 @prefix mpc: <https://w3id.org/b4b/schemes/algorithms/mpc#> .

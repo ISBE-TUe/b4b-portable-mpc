@@ -40,6 +40,7 @@ brick-ev:Vehicle_Full_Status
   rdfs:label "vehicle_full_date" ;
   rdfs:subClassOf brick-ev:EV_Charging_Session
 .
+
 brick-ev:Session_Visual_Number
   rdfs:label "visual_number";
   rdfs:subClassOf brick-ev:EV_Charging_Session
@@ -54,22 +55,22 @@ brick-ev:EV_Charging_Session a owl:Class ;
     rdfs:subClassOf brick:Point ;
 .
 
-brick-ev:EV_Charger_Voltage_Rating
+brick-ev:Charger_Voltage_Rating
   rdfs:subClassOf brick:ratedMaximumInput
 .
 
-brick-ev:EV_Charger_Power_Rating
+brick-ev:Charger_Power_Rating
   rdfs:subClassOf brick:ratedPowerInput 
 .
 
-brick-ev:EV_Charger_Efficiency 
+brick-ev:Charging_Efficiency 
   rdfs:subClassOf brick:conversionEfficiency .
 
-brick-ev:MinimumChargingCurrentSetpoint 
+brick-ev:Minimum_Charging_Current_Setpoint 
   rdfs:subClassOf brick:Setpoint 
 .
 
-brick-ev:MaximumChargingCurrentSetpoint 
+brick-ev:Maximum_Charging_Current_Setpoint 
   rdfs:subClassOf brick:Setpoint 
 .
 
